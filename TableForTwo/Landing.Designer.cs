@@ -36,7 +36,7 @@
             this.login1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.login1.Location = new System.Drawing.Point(-3, 0);
             this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(1286, 715);
+            this.login1.Size = new System.Drawing.Size(1286, 752);
             this.login1.TabIndex = 0;
             // 
             // Landing
@@ -44,10 +44,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1274, 712);
+            this.ClientSize = new System.Drawing.Size(1274, 745);
             this.Controls.Add(this.login1);
-            this.MaximumSize = new System.Drawing.Size(1290, 751);
-            this.MinimumSize = new System.Drawing.Size(1290, 751);
+            this.MaximumSize = new System.Drawing.Size(1290, 784);
+            this.MinimumSize = new System.Drawing.Size(1290, 784);
             this.Name = "Landing";
             this.Text = "Form1";
             this.ResumeLayout(false);
