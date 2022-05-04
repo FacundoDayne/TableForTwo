@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace TableForTwo
 {
-    public partial class Login : UserControl
+    public partial class Main : Form
     {
-        public Login()
+        public Main()
         {
             InitializeComponent();
         }
-       
     }
 }

@@ -1,0 +1,6 @@
+﻿using TableForTwo;
+
+class methods {
+
+    
+}
