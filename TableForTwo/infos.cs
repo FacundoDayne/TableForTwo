@@ -1,7 +1,7 @@
 ﻿class infos
 {
 
-    public String UserEmail, UserPassword;
+    public String UserEmail = "", UserPassword = "";
 
 
 

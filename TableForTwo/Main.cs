@@ -12,6 +12,7 @@ namespace TableForTwo
 {
     public partial class Main : Form
     {
+
         public Main()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace TableForTwo
 
         private void return1_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
             Landing l = new Landing();
             l.Show();
@@ -50,5 +52,6 @@ namespace TableForTwo
             this.BackColor = Color.Firebrick;
         }
 
+        
     }
 }

@@ -49,7 +49,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Controls.Add(this.label1);
             this.Name = "Tables";
-            this.Size = new System.Drawing.Size(1290, 751);
+            this.Size = new System.Drawing.Size(977, 715);
             this.ResumeLayout(false);
             this.PerformLayout();
 

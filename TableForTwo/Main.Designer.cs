@@ -33,17 +33,20 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.home1 = new TableForTwo.Home();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.logo1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(2, 0);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(313, 715);
             this.panel1.TabIndex = 0;
@@ -76,7 +79,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(292, 40);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Book A Table";
+            this.button2.Text = "Book A Date";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -97,6 +100,30 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // home1
+            // 
+            this.home1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.home1.Location = new System.Drawing.Point(300, 0);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(977, 715);
+            this.home1.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Firebrick;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(21, 350);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(292, 40);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Pick a Table";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -104,6 +131,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1274, 712);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.home1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Main";
@@ -118,10 +146,11 @@
         #endregion
 
         private Panel panel1;
-        private Welcome a1;
         private Button button1;
         private Panel panel2;
         private Button button2;
         private Logo logo1;
+        private Home home1;
+        private Button button3;
     }
 }
