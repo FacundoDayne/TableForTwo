@@ -16,5 +16,39 @@ namespace TableForTwo
         {
             InitializeComponent();
         }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel2.SetBounds(4, 258, 10, 40);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel2.SetBounds(4, 304, 10, 40);
+        }
+
+
+        private void return1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Landing l = new Landing();
+            l.Show();
+        }
+
+        private void return1_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = Color.IndianRed;
+        }
+
+        private void return1_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Firebrick;
+        }
+
     }
 }

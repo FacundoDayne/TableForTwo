@@ -163,6 +163,7 @@
             this.Name = "Landing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Table For Two";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Landing_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
