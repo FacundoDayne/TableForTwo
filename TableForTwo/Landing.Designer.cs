@@ -151,7 +151,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1274, 745);
-            this.Controls.Add(this.signup1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
@@ -161,6 +160,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logo1);
+            this.Controls.Add(this.signup1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1290, 784);

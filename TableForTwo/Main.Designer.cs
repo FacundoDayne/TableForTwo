@@ -35,6 +35,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.home1 = new TableForTwo.Home();
+            this.tables1 = new TableForTwo.Tables();
+            this.book1 = new TableForTwo.Book();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,6 +127,24 @@
             this.home1.Size = new System.Drawing.Size(977, 715);
             this.home1.TabIndex = 1;
             // 
+            // tables1
+            // 
+            this.tables1.BackColor = System.Drawing.Color.White;
+            this.tables1.Location = new System.Drawing.Point(304, -3);
+            this.tables1.Name = "tables1";
+            this.tables1.Size = new System.Drawing.Size(977, 715);
+            this.tables1.TabIndex = 2;
+            this.tables1.Visible = false;
+            // 
+            // book1
+            // 
+            this.book1.BackColor = System.Drawing.Color.White;
+            this.book1.Location = new System.Drawing.Point(304, -3);
+            this.book1.Name = "book1";
+            this.book1.Size = new System.Drawing.Size(977, 715);
+            this.book1.TabIndex = 3;
+            this.book1.Visible = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -133,6 +153,8 @@
             this.ClientSize = new System.Drawing.Size(1274, 712);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.home1);
+            this.Controls.Add(this.tables1);
+            this.Controls.Add(this.book1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Main";
@@ -153,5 +175,7 @@
         private Logo logo1;
         private Home home1;
         private Button button3;
+        private Tables tables1;
+        private Book book1;
     }
 }
