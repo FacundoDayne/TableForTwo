@@ -32,7 +32,10 @@ namespace TableForTwo
         {
             panel2.SetBounds(4, 304, 10, 40);
         }
-
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel2.SetBounds(4, 350, 10, 40);
+        }
 
         private void return1_Click(object sender, EventArgs e)
         {

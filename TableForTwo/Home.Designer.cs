@@ -45,7 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Freestyle Script", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(239, 415);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(475, 112);
@@ -56,7 +56,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
             this.label2.Location = new System.Drawing.Point(420, 507);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 20);
@@ -68,7 +68,7 @@
             // 
             this.welcome.AutoSize = true;
             this.welcome.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.welcome.ForeColor = System.Drawing.Color.White;
+            this.welcome.ForeColor = System.Drawing.Color.Maroon;
             this.welcome.Location = new System.Drawing.Point(75, 38);
             this.welcome.Name = "welcome";
             this.welcome.Size = new System.Drawing.Size(122, 20);
@@ -79,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.welcome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
