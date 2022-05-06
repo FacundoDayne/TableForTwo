@@ -37,7 +37,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.signup1 = new TableForTwo.Signup();
             this.SuspendLayout();
             // 
             // logo1
@@ -136,22 +135,12 @@
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Visible = false;
             // 
-            // signup1
-            // 
-            this.signup1.BackColor = System.Drawing.Color.White;
-            this.signup1.Location = new System.Drawing.Point(-3, -3);
-            this.signup1.Name = "signup1";
-            this.signup1.Size = new System.Drawing.Size(1290, 751);
-            this.signup1.TabIndex = 9;
-            this.signup1.Visible = false;
-            // 
             // Landing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1274, 745);
-            this.Controls.Add(this.signup1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
@@ -186,6 +175,5 @@
         private TextBox textBox2;
         private Button button2;
         private Label label4;
-        private Signup signup1;
     }
 }

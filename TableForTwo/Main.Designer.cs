@@ -119,8 +119,8 @@
             // 
             // home1
             // 
-            this.home1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.home1.Location = new System.Drawing.Point(300, 0);
+            this.home1.BackColor = System.Drawing.Color.White;
+            this.home1.Location = new System.Drawing.Point(304, -3);
             this.home1.Name = "home1";
             this.home1.Size = new System.Drawing.Size(977, 715);
             this.home1.TabIndex = 1;
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1274, 712);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.home1);
