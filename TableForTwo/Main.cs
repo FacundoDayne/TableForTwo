@@ -23,23 +23,55 @@ namespace TableForTwo
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void homeButton_Click(object sender, EventArgs e)
         {
-            panel2.SetBounds(4, 258, 10, 40);
-            tables1.Hide(); home1.Show(); book1.Hide();
+            // Set Style
+            homeButton.ForeColor = Color.Black;
+            homeButton.BackgroundImage = Properties.Resources.Selected;
+
+            bookAScheduleButton.ForeColor = Color.White;
+            bookAScheduleButton.BackgroundImage = Properties.Resources.Unselected;
+
+            mySchedulesButton.ForeColor = Color.White;
+            mySchedulesButton.BackgroundImage = Properties.Resources.Unselected;
+
+            homeTab.Show();
+            scheduleTab.Hide();
+            mySchedulesTab.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void scheduleButton_Click(object sender, EventArgs e)
         {
-            panel2.SetBounds(4, 304, 10, 40);
-            tables1.Show(); home1.Hide(); book1.Hide();
-        }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            panel2.SetBounds(4, 350, 10, 40);
-            tables1.Hide(); home1.Hide(); book1.Show();
+            // Set Style
+            homeButton.ForeColor = Color.White;
+            homeButton.BackgroundImage = Properties.Resources.Unselected;
+
+            bookAScheduleButton.ForeColor = Color.Black;
+            bookAScheduleButton.BackgroundImage = Properties.Resources.Selected;
+
+            mySchedulesButton.ForeColor = Color.White;
+            mySchedulesButton.BackgroundImage = Properties.Resources.Unselected;
+
+            homeTab.Hide();
+            scheduleTab.Show();
+            mySchedulesTab.Hide();
         }
 
-        
+        private void mySchedulesButton_Click(object sender, EventArgs e)
+        {
+            // Set Style
+            homeButton.ForeColor = Color.White;
+            homeButton.BackgroundImage = Properties.Resources.Unselected;
+
+            bookAScheduleButton.ForeColor = Color.White;
+            bookAScheduleButton.BackgroundImage = Properties.Resources.Unselected;
+
+            mySchedulesButton.ForeColor = Color.Black;
+            mySchedulesButton.BackgroundImage = Properties.Resources.Selected;
+
+            homeTab.Hide();
+            scheduleTab.Hide();
+            mySchedulesTab.Show();
+        }
     }
 }

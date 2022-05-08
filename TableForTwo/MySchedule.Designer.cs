@@ -1,6 +1,6 @@
 ﻿namespace TableForTwo
 {
-    partial class Book
+    partial class MySchedule
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,35 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Freestyle Script", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(16, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(392, 112);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Book a Table";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(412, 77);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "MY SCHEDULES";
             // 
-            // Book
+            // MySchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label1);
-            this.Name = "Book";
-            this.Size = new System.Drawing.Size(977, 715);
+            this.Controls.Add(this.label2);
+            this.Name = "MySchedule";
+            this.Size = new System.Drawing.Size(958, 711);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Label label1;
+        private Label label2;
     }
 }

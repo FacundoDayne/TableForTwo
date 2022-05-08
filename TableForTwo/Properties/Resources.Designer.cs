@@ -93,6 +93,16 @@ namespace TableForTwo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo {
+            get {
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap return_2 {
             get {
                 object obj = ResourceManager.GetObject("return 2", resourceCulture);
@@ -106,6 +116,26 @@ namespace TableForTwo.Properties {
         internal static System.Drawing.Bitmap Roses_red_rose_with_bud_transparent_clip_art_picture {
             get {
                 object obj = ResourceManager.GetObject("Roses-red-rose-with-bud-transparent-clip-art-picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Selected {
+            get {
+                object obj = ResourceManager.GetObject("Selected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Unselected {
+            get {
+                object obj = ResourceManager.GetObject("Unselected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
