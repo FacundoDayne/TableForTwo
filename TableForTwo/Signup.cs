@@ -19,12 +19,51 @@ namespace TableForTwo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            if (Username.Text == ""|| Password.Text == "" || Confirm.Text == "" || 
+                Username.Text == " " || Password.Text == " " || Confirm.Text == " ")
+            {
+                label4.Show(); label13.Hide();
+            }
+            else if(Password.Text != Confirm.Text){
+                label4.Hide();  label13.Show(); 
+            }
+            else
+            {
+                this.Hide();
+            }
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void FirstName_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+            }
+        }
 
+        private void LastName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.LastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+            }
+        }
+
+       
+        private void Contact_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+            }
+        }
+
+        private void Email_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Email.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TableForTwo
 
             Boolean placeholder = true;
 
-            if (email != "tite")
+            if (email != "" || email != " ")
             {
                 UserInformation CurrentUser = new UserInformation(email, pass);
                 UserInformation.SetLoggedInUser(CurrentUser);
