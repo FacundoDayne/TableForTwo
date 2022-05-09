@@ -143,7 +143,7 @@
             this.Confirm.PasswordChar = '*';
             this.Confirm.Size = new System.Drawing.Size(231, 24);
             this.Confirm.TabIndex = 7;
-            this.Confirm.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FirstName_KeyDown);
+            this.Confirm.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Confirm_KeyDown);
             // 
             // Username
             // 
@@ -152,7 +152,7 @@
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(316, 24);
             this.Username.TabIndex = 5;
-            this.Username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FirstName_KeyDown);
+            this.Username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Username_KeyDown);
             // 
             // Password
             // 
@@ -162,6 +162,7 @@
             this.Password.PasswordChar = '*';
             this.Password.Size = new System.Drawing.Size(317, 24);
             this.Password.TabIndex = 6;
+            this.Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Password_KeyDown);
             // 
             // label5
             // 
@@ -316,6 +317,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Signup";
             this.Size = new System.Drawing.Size(1290, 784);
+            this.Load += new System.EventHandler(this.Signup_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FirstName_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
