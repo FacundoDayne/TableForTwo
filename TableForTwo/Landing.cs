@@ -18,13 +18,18 @@ namespace TableForTwo
 
             Boolean placeholder = true;
 
-            if (placeholder)
+            if (email != "tite")
             {
                 UserInformation CurrentUser = new UserInformation(email, pass);
                 UserInformation.SetLoggedInUser(CurrentUser);
                 this.Hide();
                 Main m = new Main();
                 m.Show();
+            }
+
+            else
+            {
+                label4.Show();textBox1.Clear(); textBox2.Clear();
             }
 
         }
@@ -39,5 +44,17 @@ namespace TableForTwo
             Application.Exit();
         }
 
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+            }
+        }
+
+        private void Landing_Load(object sender, EventArgs e)
+        {
+            textBox1.Select();
+        }
     }
 }
