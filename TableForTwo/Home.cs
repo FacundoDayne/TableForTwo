@@ -12,8 +12,9 @@ namespace TableForTwo
 {
     public partial class Home : UserControl
     {
+        UserInformation loggedInUser = UserInformation.GetLoggedInUser();
         
-        infos i = null;
+        
         public Home()
         {
             InitializeComponent();
@@ -21,8 +22,8 @@ namespace TableForTwo
 
         private void Home_Load(object sender, EventArgs e)
         {
-            i = new infos();
-            welcome.Text = welcome.Text + i.UserEmail;
+            string email = loggedInUser.UserEmail;
+            welcome.Text = welcome.Text + email;
         }
     }
 }

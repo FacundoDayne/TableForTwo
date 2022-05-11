@@ -107,8 +107,10 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(546, 572);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(267, 23);
             this.textBox2.TabIndex = 6;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // button2
             // 
@@ -151,6 +153,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1274, 745);
+            this.Controls.Add(this.signup1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
@@ -160,7 +163,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logo1);
-            this.Controls.Add(this.signup1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1290, 784);
@@ -169,6 +171,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Table For Two";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Landing_FormClosed);
+            this.Load += new System.EventHandler(this.Landing_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
