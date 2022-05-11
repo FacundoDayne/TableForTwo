@@ -12,6 +12,7 @@ namespace TableForTwo
 {
     public partial class BookSchedule : UserControl
     {
+        private Panel? selectedTable;
         public BookSchedule()
         {
             InitializeComponent();
@@ -42,6 +43,18 @@ namespace TableForTwo
         private void incrementDateButton_Click(object sender, EventArgs e)
         {
             dateTimePicker1.Value = dateTimePicker1.Value.AddDays(1);
+        }
+
+        public void TableClick(object sender, EventArgs e)
+        {
+            if (selectedTable != null)
+            {
+                selectedTable.BackgroundImage = Properties.Resources.TableAvailable;
+            }
+
+            Panel control = (Panel)sender;
+            control.BackgroundImage = Properties.Resources.TableSelected;
+            selectedTable = control;
         }
     }
 }
