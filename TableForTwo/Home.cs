@@ -22,7 +22,7 @@ namespace TableForTwo
 
         private void Home_Load(object sender, EventArgs e)
         {
-            string email = loggedInUser.UserEmail;
+            string email = loggedInUser.Username;
             welcome.Text = welcome.Text + email;
         }
     }

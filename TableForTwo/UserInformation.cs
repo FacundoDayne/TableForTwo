@@ -2,12 +2,12 @@
 {
     private static UserInformation? LoggedInUser;
 
-    public string UserEmail, UserPassword;
+    public string Username, UserPassword;
 
 
-    public UserInformation(string UserEmail, string UserPassword)
+    public UserInformation(string Username, string UserPassword)
     {
-        this.UserEmail = UserEmail;
+        this.Username = Username;
         this.UserPassword = UserPassword;
     }
 

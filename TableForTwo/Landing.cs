@@ -11,25 +11,34 @@ namespace TableForTwo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            String email = textBox1.Text, pass = textBox2.Text;
+            label4.Hide();
+            Sequel Sequel = new Sequel();
+            String user = textBox1.Text, pass = textBox2.Text;
 
             //**************************  HAVE TO ADD A FUNCTION TO SEE WHETHER OR NOT THE EMAIL AND PASS ARE CORRECT ************************
 
             Boolean placeholder = true;
 
-            if (email != "" || email != " ")
+            if (user != "" || user != " ")
             {
-                UserInformation CurrentUser = new UserInformation(email, pass);
-                UserInformation.SetLoggedInUser(CurrentUser);
-                this.Hide();
-                Main m = new Main();
-                m.Show();
-            }
 
-            else
-            {
-                label4.Show();textBox1.Clear(); textBox2.Clear();
+                bool UserIsGood = Sequel.checkUsername(user);
+                if (UserIsGood)
+                {
+                    bool PassIsGood = Sequel.checkPassword(pass);
+                    if(PassIsGood)
+                    {
+                        UserInformation CurrentUser = new UserInformation(user, pass);
+                        UserInformation.SetLoggedInUser(CurrentUser);
+                        this.Hide();
+                        Main m = new Main();
+                        m.Show();
+                    }
+                }
+                else
+                {
+                    label4.Show(); textBox2.Clear();
+                }
             }
 
         }

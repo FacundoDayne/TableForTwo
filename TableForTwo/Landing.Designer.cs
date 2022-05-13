@@ -66,11 +66,11 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(426, 525);
+            this.label2.Location = new System.Drawing.Point(454, 525);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Email Address";
+            this.label2.Text = "Username";
             // 
             // label3
             // 
