@@ -23,7 +23,7 @@ namespace TableForTwo
             if (dateTimePicker1.Value.Date < DateTime.Today.Date)
             {
                 dateTimePicker1.Value = DateTime.Today;
-                MessageBox.Show("Invalid Date", "Invalid Date", MessageBoxButtons.OK);
+                MessageBox.Show("Error", "The date selected is not available anymore.", MessageBoxButtons.OK);
             }
             else if (dateTimePicker1.Value.Date == DateTime.Today.Date)
             {
@@ -45,16 +45,133 @@ namespace TableForTwo
             dateTimePicker1.Value = dateTimePicker1.Value.AddDays(1);
         }
 
-        public void TableClick(object sender, EventArgs e)
+        private void SetTableAvailable(Panel table)
         {
-            if (selectedTable != null)
+            if (table.Tag.Equals("2"))
             {
-                selectedTable.BackgroundImage = Properties.Resources.TableAvailable;
+                table.BackgroundImage = Properties.Resources.TableAvailable;
+            }
+            else if (table.Tag.Equals("4"))
+            {
+                table.BackgroundImage = Properties.Resources.TableFor4Available;
             }
 
-            Panel control = (Panel)sender;
-            control.BackgroundImage = Properties.Resources.TableSelected;
-            selectedTable = control;
+            table.Enabled = true;
+        }
+
+        private void SetTableSelected(Panel table)
+        {
+            if (table.Tag.Equals("2"))
+            {
+                table.BackgroundImage = Properties.Resources.TableSelected;
+            }
+            else if (table.Tag.Equals("4"))
+            {
+                table.BackgroundImage = Properties.Resources.TableFor4Selected;
+            }
+            
+            selectedTable = table;
+            table.Enabled = true;
+        }
+
+        private void SetTableUnavailable(Panel table)
+        {
+            if (table.Tag.Equals("2"))
+            {
+                table.BackgroundImage = Properties.Resources.TableUnavailable;
+            }
+            else if (table.Tag.Equals("4"))
+            {
+                table.BackgroundImage = Properties.Resources.TableFor4Unavailable;
+            }
+
+            table.Enabled = false;
+        }
+
+        private void TableFor2Click(object sender, EventArgs e)
+        {
+            if (!((Panel)sender).Enabled)
+                return;
+
+            if (selectedTable != null)
+                SetTableAvailable(selectedTable);
+
+            Panel table = (Panel)sender;
+            SetTableSelected(table);
+        }
+
+        private void TableFor4Click(object sender, EventArgs e)
+        {
+            if (!((Panel)sender).Enabled)
+                return;
+
+            if (selectedTable != null)
+                SetTableAvailable(selectedTable);
+
+            Panel table = (Panel)sender;
+            SetTableSelected(table);
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            selectedTable = null;
+
+            if (((NumericUpDown)sender).Value <= 2)
+            {
+                SetTableFor2Available();
+                SetTableFor4Available();
+            }
+            else if (((NumericUpDown)sender).Value <= 4)
+            {
+                SetTableFor2Unavailable();
+                SetTableFor4Available();
+            }
+            else
+            {
+                SetTableFor2Unavailable();
+                SetTableFor4Unavailable();
+            }
+        }
+
+        private void SetTableFor2Available()
+        {
+            foreach (Control table in tableContainer.Controls)
+            {
+                if (table is Panel && table.Tag.Equals("2"))
+                {
+                    SetTableAvailable((Panel)table);
+                }
+            }
+        }
+        private void SetTableFor2Unavailable()
+        {
+            foreach (Control table in tableContainer.Controls)
+            {
+                if (table is Panel && table.Tag.Equals("2"))
+                {
+                    SetTableUnavailable((Panel)table);
+                }
+            }
+        }
+        private void SetTableFor4Available()
+        {
+            foreach (Control table in tableContainer.Controls)
+            {
+                if (table is Panel && table.Tag.Equals("4"))
+                {
+                    SetTableAvailable((Panel)table);
+                }
+            }
+        }
+        private void SetTableFor4Unavailable()
+        {
+            foreach (Control table in tableContainer.Controls)
+            {
+                if (table is Panel && table.Tag.Equals("4"))
+                {
+                    SetTableUnavailable((Panel)table);
+                }
+            }
         }
     }
 }
