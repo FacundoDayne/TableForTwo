@@ -70,7 +70,7 @@
             this.welcome.AutoSize = true;
             this.welcome.Font = new System.Drawing.Font("Bahnschrift", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.welcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.welcome.Location = new System.Drawing.Point(11, 96);
+            this.welcome.Location = new System.Drawing.Point(13, 58);
             this.welcome.Name = "welcome";
             this.welcome.Size = new System.Drawing.Size(278, 42);
             this.welcome.TabIndex = 3;
@@ -79,11 +79,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 77);
+            this.label3.Size = new System.Drawing.Size(132, 58);
             this.label3.TabIndex = 4;
             this.label3.Text = "HOME";
             // 

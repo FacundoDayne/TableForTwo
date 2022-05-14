@@ -13,9 +13,27 @@ namespace TableForTwo
     public partial class BookSchedule : UserControl
     {
         private Panel? selectedTable;
+
+        List<int> availableStartTime = new List<int>();
+        List<int> availableEndTime = new List<int>();
+
         public BookSchedule()
         {
             InitializeComponent();
+        }
+
+        private void BookSchedule_Load(object sender, EventArgs e)
+        {
+            SetAvailableTimeDefault();
+        }
+
+        private void SetAvailableTimeDefault()
+        {
+            for (int i = 1; i <= 24; i++)
+            {
+                availableStartTime.Add(i);
+                availableEndTime.Add(i);
+            }
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -172,6 +190,97 @@ namespace TableForTwo
                     SetTableUnavailable((Panel)table);
                 }
             }
+        }
+
+        private void StartTimeCheckChanged(object sender, EventArgs e)
+        {
+            RadioButton source = (RadioButton)sender;
+            string tag = (string)source.Tag;
+
+            if (source.Checked)
+            {
+                DisableEndTimeRadioButtonByTag(tag); 
+            }
+            else
+            {
+                if (availableEndTime.Contains(int.Parse(tag)))
+                {
+                    EnableEndTimeRadioButtonByTag(tag);
+                }
+            }
+
+            endTimeGroupBox.Enabled = true;
+        }
+
+        private void EndTimeCheckChanged(object sender, EventArgs e)
+        {
+            RadioButton source = (RadioButton)sender;
+            string tag = (string)source.Tag;
+
+            if (source.Checked)
+            {
+                DisableStartTimeRadioButtonByTag(tag);
+            }
+            else
+            {
+                if (availableEndTime.Contains(int.Parse(tag)))
+                {
+                    EnableStartTimeRadioButtonByTag(tag);
+                }
+            }
+        }
+
+        private void DisableStartTimeRadioButtonByTag(string tag)
+        {
+            foreach (Control timeCheckBox in startTimeGroupBox.Controls)
+            {
+                if (timeCheckBox is RadioButton && timeCheckBox.Tag.Equals(tag))
+                {
+                    ((RadioButton)timeCheckBox).Checked = false;
+                    timeCheckBox.Enabled = false;
+                }
+            }
+        }
+
+        private void EnableStartTimeRadioButtonByTag(string tag)
+        {
+            foreach (Control timeCheckBox in startTimeGroupBox.Controls)
+            {
+                if (timeCheckBox is RadioButton && timeCheckBox.Tag.Equals(tag))
+                {
+                    timeCheckBox.Enabled = true;
+                }
+            }
+        }
+
+        private void DisableEndTimeRadioButtonByTag(string tag)
+        {
+            foreach (Control timeCheckBox in endTimeGroupBox.Controls)
+            {
+                if (timeCheckBox is RadioButton && timeCheckBox.Tag.Equals(tag))
+                {
+                    ((RadioButton)timeCheckBox).Checked = false;
+                    timeCheckBox.Enabled = false;
+                }
+            }
+        }
+
+        private void EnableEndTimeRadioButtonByTag(string tag)
+        {
+            foreach (Control timeCheckBox in endTimeGroupBox.Controls)
+            {
+                if (timeCheckBox is RadioButton && timeCheckBox.Tag.Equals(tag))
+                {
+                    timeCheckBox.Enabled = true;
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string tag = numericUpDown1.Value.ToString();
+
+            DisableEndTimeRadioButtonByTag(tag);
         }
     }
 }

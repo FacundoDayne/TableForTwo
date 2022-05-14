@@ -50,7 +50,7 @@
             this.table2G = new System.Windows.Forms.Panel();
             this.table2A = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.startGroupBox = new System.Windows.Forms.GroupBox();
+            this.startTimeGroupBox = new System.Windows.Forms.GroupBox();
             this.rbs24 = new System.Windows.Forms.RadioButton();
             this.rbs23 = new System.Windows.Forms.RadioButton();
             this.rbs22 = new System.Windows.Forms.RadioButton();
@@ -75,7 +75,7 @@
             this.rbs3 = new System.Windows.Forms.RadioButton();
             this.rbs2 = new System.Windows.Forms.RadioButton();
             this.rbs1 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.endTimeGroupBox = new System.Windows.Forms.GroupBox();
             this.rbe24 = new System.Windows.Forms.RadioButton();
             this.rbe23 = new System.Windows.Forms.RadioButton();
             this.rbe22 = new System.Windows.Forms.RadioButton();
@@ -107,9 +107,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.startGroupBox.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.startTimeGroupBox.SuspendLayout();
+            this.endTimeGroupBox.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableContainer.SuspendLayout();
@@ -372,39 +373,39 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Time:";
             // 
-            // startGroupBox
+            // startTimeGroupBox
             // 
-            this.startGroupBox.Controls.Add(this.rbs24);
-            this.startGroupBox.Controls.Add(this.rbs23);
-            this.startGroupBox.Controls.Add(this.rbs22);
-            this.startGroupBox.Controls.Add(this.rbs21);
-            this.startGroupBox.Controls.Add(this.rbs20);
-            this.startGroupBox.Controls.Add(this.rbs19);
-            this.startGroupBox.Controls.Add(this.rbs18);
-            this.startGroupBox.Controls.Add(this.rbs17);
-            this.startGroupBox.Controls.Add(this.rbs16);
-            this.startGroupBox.Controls.Add(this.rbs15);
-            this.startGroupBox.Controls.Add(this.rbs14);
-            this.startGroupBox.Controls.Add(this.rbs13);
-            this.startGroupBox.Controls.Add(this.rbs12);
-            this.startGroupBox.Controls.Add(this.rbs11);
-            this.startGroupBox.Controls.Add(this.rbs10);
-            this.startGroupBox.Controls.Add(this.rbs9);
-            this.startGroupBox.Controls.Add(this.rbs8);
-            this.startGroupBox.Controls.Add(this.rbs7);
-            this.startGroupBox.Controls.Add(this.rbs6);
-            this.startGroupBox.Controls.Add(this.rbs5);
-            this.startGroupBox.Controls.Add(this.rbs4);
-            this.startGroupBox.Controls.Add(this.rbs3);
-            this.startGroupBox.Controls.Add(this.rbs2);
-            this.startGroupBox.Controls.Add(this.rbs1);
-            this.startGroupBox.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.startGroupBox.Location = new System.Drawing.Point(9, 140);
-            this.startGroupBox.Name = "startGroupBox";
-            this.startGroupBox.Size = new System.Drawing.Size(80, 568);
-            this.startGroupBox.TabIndex = 13;
-            this.startGroupBox.TabStop = false;
-            this.startGroupBox.Text = "START";
+            this.startTimeGroupBox.Controls.Add(this.rbs24);
+            this.startTimeGroupBox.Controls.Add(this.rbs23);
+            this.startTimeGroupBox.Controls.Add(this.rbs22);
+            this.startTimeGroupBox.Controls.Add(this.rbs21);
+            this.startTimeGroupBox.Controls.Add(this.rbs20);
+            this.startTimeGroupBox.Controls.Add(this.rbs19);
+            this.startTimeGroupBox.Controls.Add(this.rbs18);
+            this.startTimeGroupBox.Controls.Add(this.rbs17);
+            this.startTimeGroupBox.Controls.Add(this.rbs16);
+            this.startTimeGroupBox.Controls.Add(this.rbs15);
+            this.startTimeGroupBox.Controls.Add(this.rbs14);
+            this.startTimeGroupBox.Controls.Add(this.rbs13);
+            this.startTimeGroupBox.Controls.Add(this.rbs12);
+            this.startTimeGroupBox.Controls.Add(this.rbs11);
+            this.startTimeGroupBox.Controls.Add(this.rbs10);
+            this.startTimeGroupBox.Controls.Add(this.rbs9);
+            this.startTimeGroupBox.Controls.Add(this.rbs8);
+            this.startTimeGroupBox.Controls.Add(this.rbs7);
+            this.startTimeGroupBox.Controls.Add(this.rbs6);
+            this.startTimeGroupBox.Controls.Add(this.rbs5);
+            this.startTimeGroupBox.Controls.Add(this.rbs4);
+            this.startTimeGroupBox.Controls.Add(this.rbs3);
+            this.startTimeGroupBox.Controls.Add(this.rbs2);
+            this.startTimeGroupBox.Controls.Add(this.rbs1);
+            this.startTimeGroupBox.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.startTimeGroupBox.Location = new System.Drawing.Point(9, 140);
+            this.startTimeGroupBox.Name = "startTimeGroupBox";
+            this.startTimeGroupBox.Size = new System.Drawing.Size(80, 568);
+            this.startTimeGroupBox.TabIndex = 13;
+            this.startTimeGroupBox.TabStop = false;
+            this.startTimeGroupBox.Text = "START";
             // 
             // rbs24
             // 
@@ -414,8 +415,10 @@
             this.rbs24.Name = "rbs24";
             this.rbs24.Size = new System.Drawing.Size(54, 17);
             this.rbs24.TabIndex = 23;
+            this.rbs24.Tag = "24";
             this.rbs24.Text = "12 AM";
             this.rbs24.UseVisualStyleBackColor = true;
+            this.rbs24.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs23
             // 
@@ -425,8 +428,10 @@
             this.rbs23.Name = "rbs23";
             this.rbs23.Size = new System.Drawing.Size(52, 17);
             this.rbs23.TabIndex = 22;
+            this.rbs23.Tag = "23";
             this.rbs23.Text = "11 AM";
             this.rbs23.UseVisualStyleBackColor = true;
+            this.rbs23.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs22
             // 
@@ -436,8 +441,10 @@
             this.rbs22.Name = "rbs22";
             this.rbs22.Size = new System.Drawing.Size(54, 17);
             this.rbs22.TabIndex = 21;
+            this.rbs22.Tag = "22";
             this.rbs22.Text = "10 AM";
             this.rbs22.UseVisualStyleBackColor = true;
+            this.rbs22.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs21
             // 
@@ -447,8 +454,10 @@
             this.rbs21.Name = "rbs21";
             this.rbs21.Size = new System.Drawing.Size(50, 17);
             this.rbs21.TabIndex = 20;
+            this.rbs21.Tag = "21";
             this.rbs21.Text = "9 AM";
             this.rbs21.UseVisualStyleBackColor = true;
+            this.rbs21.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs20
             // 
@@ -458,8 +467,10 @@
             this.rbs20.Name = "rbs20";
             this.rbs20.Size = new System.Drawing.Size(50, 17);
             this.rbs20.TabIndex = 19;
+            this.rbs20.Tag = "20";
             this.rbs20.Text = "8 AM";
             this.rbs20.UseVisualStyleBackColor = true;
+            this.rbs20.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs19
             // 
@@ -469,8 +480,10 @@
             this.rbs19.Name = "rbs19";
             this.rbs19.Size = new System.Drawing.Size(50, 17);
             this.rbs19.TabIndex = 18;
+            this.rbs19.Tag = "19";
             this.rbs19.Text = "7 AM";
             this.rbs19.UseVisualStyleBackColor = true;
+            this.rbs19.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs18
             // 
@@ -480,8 +493,10 @@
             this.rbs18.Name = "rbs18";
             this.rbs18.Size = new System.Drawing.Size(50, 17);
             this.rbs18.TabIndex = 17;
+            this.rbs18.Tag = "18";
             this.rbs18.Text = "6 AM";
             this.rbs18.UseVisualStyleBackColor = true;
+            this.rbs18.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs17
             // 
@@ -491,8 +506,10 @@
             this.rbs17.Name = "rbs17";
             this.rbs17.Size = new System.Drawing.Size(50, 17);
             this.rbs17.TabIndex = 16;
+            this.rbs17.Tag = "17";
             this.rbs17.Text = "5 AM";
             this.rbs17.UseVisualStyleBackColor = true;
+            this.rbs17.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs16
             // 
@@ -502,8 +519,10 @@
             this.rbs16.Name = "rbs16";
             this.rbs16.Size = new System.Drawing.Size(50, 17);
             this.rbs16.TabIndex = 15;
+            this.rbs16.Tag = "16";
             this.rbs16.Text = "4 AM";
             this.rbs16.UseVisualStyleBackColor = true;
+            this.rbs16.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs15
             // 
@@ -513,8 +532,10 @@
             this.rbs15.Name = "rbs15";
             this.rbs15.Size = new System.Drawing.Size(50, 17);
             this.rbs15.TabIndex = 14;
+            this.rbs15.Tag = "15";
             this.rbs15.Text = "3 AM";
             this.rbs15.UseVisualStyleBackColor = true;
+            this.rbs15.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs14
             // 
@@ -524,8 +545,10 @@
             this.rbs14.Name = "rbs14";
             this.rbs14.Size = new System.Drawing.Size(50, 17);
             this.rbs14.TabIndex = 13;
+            this.rbs14.Tag = "14";
             this.rbs14.Text = "2 AM";
             this.rbs14.UseVisualStyleBackColor = true;
+            this.rbs14.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs13
             // 
@@ -535,8 +558,10 @@
             this.rbs13.Name = "rbs13";
             this.rbs13.Size = new System.Drawing.Size(48, 17);
             this.rbs13.TabIndex = 12;
+            this.rbs13.Tag = "13";
             this.rbs13.Text = "1 AM";
             this.rbs13.UseVisualStyleBackColor = true;
+            this.rbs13.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs12
             // 
@@ -546,8 +571,10 @@
             this.rbs12.Name = "rbs12";
             this.rbs12.Size = new System.Drawing.Size(54, 17);
             this.rbs12.TabIndex = 11;
+            this.rbs12.Tag = "12";
             this.rbs12.Text = "12 AM";
             this.rbs12.UseVisualStyleBackColor = true;
+            this.rbs12.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs11
             // 
@@ -557,8 +584,10 @@
             this.rbs11.Name = "rbs11";
             this.rbs11.Size = new System.Drawing.Size(52, 17);
             this.rbs11.TabIndex = 10;
+            this.rbs11.Tag = "11";
             this.rbs11.Text = "11 AM";
             this.rbs11.UseVisualStyleBackColor = true;
+            this.rbs11.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs10
             // 
@@ -568,8 +597,10 @@
             this.rbs10.Name = "rbs10";
             this.rbs10.Size = new System.Drawing.Size(54, 17);
             this.rbs10.TabIndex = 9;
+            this.rbs10.Tag = "10";
             this.rbs10.Text = "10 AM";
             this.rbs10.UseVisualStyleBackColor = true;
+            this.rbs10.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs9
             // 
@@ -579,8 +610,10 @@
             this.rbs9.Name = "rbs9";
             this.rbs9.Size = new System.Drawing.Size(50, 17);
             this.rbs9.TabIndex = 8;
+            this.rbs9.Tag = "9";
             this.rbs9.Text = "9 AM";
             this.rbs9.UseVisualStyleBackColor = true;
+            this.rbs9.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs8
             // 
@@ -590,8 +623,10 @@
             this.rbs8.Name = "rbs8";
             this.rbs8.Size = new System.Drawing.Size(50, 17);
             this.rbs8.TabIndex = 7;
+            this.rbs8.Tag = "8";
             this.rbs8.Text = "8 AM";
             this.rbs8.UseVisualStyleBackColor = true;
+            this.rbs8.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs7
             // 
@@ -601,8 +636,10 @@
             this.rbs7.Name = "rbs7";
             this.rbs7.Size = new System.Drawing.Size(50, 17);
             this.rbs7.TabIndex = 6;
+            this.rbs7.Tag = "7";
             this.rbs7.Text = "7 AM";
             this.rbs7.UseVisualStyleBackColor = true;
+            this.rbs7.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs6
             // 
@@ -612,8 +649,10 @@
             this.rbs6.Name = "rbs6";
             this.rbs6.Size = new System.Drawing.Size(50, 17);
             this.rbs6.TabIndex = 5;
+            this.rbs6.Tag = "6";
             this.rbs6.Text = "6 AM";
             this.rbs6.UseVisualStyleBackColor = true;
+            this.rbs6.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs5
             // 
@@ -623,8 +662,10 @@
             this.rbs5.Name = "rbs5";
             this.rbs5.Size = new System.Drawing.Size(50, 17);
             this.rbs5.TabIndex = 4;
+            this.rbs5.Tag = "5";
             this.rbs5.Text = "5 AM";
             this.rbs5.UseVisualStyleBackColor = true;
+            this.rbs5.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs4
             // 
@@ -634,8 +675,10 @@
             this.rbs4.Name = "rbs4";
             this.rbs4.Size = new System.Drawing.Size(50, 17);
             this.rbs4.TabIndex = 3;
+            this.rbs4.Tag = "4";
             this.rbs4.Text = "4 AM";
             this.rbs4.UseVisualStyleBackColor = true;
+            this.rbs4.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs3
             // 
@@ -645,8 +688,10 @@
             this.rbs3.Name = "rbs3";
             this.rbs3.Size = new System.Drawing.Size(50, 17);
             this.rbs3.TabIndex = 2;
+            this.rbs3.Tag = "3";
             this.rbs3.Text = "3 AM";
             this.rbs3.UseVisualStyleBackColor = true;
+            this.rbs3.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs2
             // 
@@ -656,8 +701,10 @@
             this.rbs2.Name = "rbs2";
             this.rbs2.Size = new System.Drawing.Size(50, 17);
             this.rbs2.TabIndex = 1;
+            this.rbs2.Tag = "2";
             this.rbs2.Text = "2 AM";
             this.rbs2.UseVisualStyleBackColor = true;
+            this.rbs2.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
             // rbs1
             // 
@@ -669,42 +716,45 @@
             this.rbs1.Size = new System.Drawing.Size(48, 17);
             this.rbs1.TabIndex = 0;
             this.rbs1.TabStop = true;
+            this.rbs1.Tag = "1";
             this.rbs1.Text = "1 AM";
             this.rbs1.UseVisualStyleBackColor = true;
+            this.rbs1.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
-            // groupBox1
+            // endTimeGroupBox
             // 
-            this.groupBox1.Controls.Add(this.rbe24);
-            this.groupBox1.Controls.Add(this.rbe23);
-            this.groupBox1.Controls.Add(this.rbe22);
-            this.groupBox1.Controls.Add(this.rbe21);
-            this.groupBox1.Controls.Add(this.rbe20);
-            this.groupBox1.Controls.Add(this.rbe19);
-            this.groupBox1.Controls.Add(this.rbe18);
-            this.groupBox1.Controls.Add(this.rbe17);
-            this.groupBox1.Controls.Add(this.rbe16);
-            this.groupBox1.Controls.Add(this.rbe15);
-            this.groupBox1.Controls.Add(this.rbe14);
-            this.groupBox1.Controls.Add(this.rbe13);
-            this.groupBox1.Controls.Add(this.rbe12);
-            this.groupBox1.Controls.Add(this.rbe11);
-            this.groupBox1.Controls.Add(this.rbe10);
-            this.groupBox1.Controls.Add(this.rbe9);
-            this.groupBox1.Controls.Add(this.rbe8);
-            this.groupBox1.Controls.Add(this.rbe7);
-            this.groupBox1.Controls.Add(this.rbe6);
-            this.groupBox1.Controls.Add(this.rbe5);
-            this.groupBox1.Controls.Add(this.rbe4);
-            this.groupBox1.Controls.Add(this.rbe3);
-            this.groupBox1.Controls.Add(this.rbe2);
-            this.groupBox1.Controls.Add(this.rbe1);
-            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(95, 140);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(80, 568);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "END";
+            this.endTimeGroupBox.Controls.Add(this.rbe24);
+            this.endTimeGroupBox.Controls.Add(this.rbe23);
+            this.endTimeGroupBox.Controls.Add(this.rbe22);
+            this.endTimeGroupBox.Controls.Add(this.rbe21);
+            this.endTimeGroupBox.Controls.Add(this.rbe20);
+            this.endTimeGroupBox.Controls.Add(this.rbe19);
+            this.endTimeGroupBox.Controls.Add(this.rbe18);
+            this.endTimeGroupBox.Controls.Add(this.rbe17);
+            this.endTimeGroupBox.Controls.Add(this.rbe16);
+            this.endTimeGroupBox.Controls.Add(this.rbe15);
+            this.endTimeGroupBox.Controls.Add(this.rbe14);
+            this.endTimeGroupBox.Controls.Add(this.rbe13);
+            this.endTimeGroupBox.Controls.Add(this.rbe12);
+            this.endTimeGroupBox.Controls.Add(this.rbe11);
+            this.endTimeGroupBox.Controls.Add(this.rbe10);
+            this.endTimeGroupBox.Controls.Add(this.rbe9);
+            this.endTimeGroupBox.Controls.Add(this.rbe8);
+            this.endTimeGroupBox.Controls.Add(this.rbe7);
+            this.endTimeGroupBox.Controls.Add(this.rbe6);
+            this.endTimeGroupBox.Controls.Add(this.rbe5);
+            this.endTimeGroupBox.Controls.Add(this.rbe4);
+            this.endTimeGroupBox.Controls.Add(this.rbe3);
+            this.endTimeGroupBox.Controls.Add(this.rbe2);
+            this.endTimeGroupBox.Controls.Add(this.rbe1);
+            this.endTimeGroupBox.Enabled = false;
+            this.endTimeGroupBox.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.endTimeGroupBox.Location = new System.Drawing.Point(95, 140);
+            this.endTimeGroupBox.Name = "endTimeGroupBox";
+            this.endTimeGroupBox.Size = new System.Drawing.Size(80, 568);
+            this.endTimeGroupBox.TabIndex = 24;
+            this.endTimeGroupBox.TabStop = false;
+            this.endTimeGroupBox.Text = "END";
             // 
             // rbe24
             // 
@@ -714,8 +764,10 @@
             this.rbe24.Name = "rbe24";
             this.rbe24.Size = new System.Drawing.Size(54, 17);
             this.rbe24.TabIndex = 23;
+            this.rbe24.Tag = "24";
             this.rbe24.Text = "12 AM";
             this.rbe24.UseVisualStyleBackColor = true;
+            this.rbe24.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe23
             // 
@@ -725,8 +777,10 @@
             this.rbe23.Name = "rbe23";
             this.rbe23.Size = new System.Drawing.Size(52, 17);
             this.rbe23.TabIndex = 22;
+            this.rbe23.Tag = "23";
             this.rbe23.Text = "11 AM";
             this.rbe23.UseVisualStyleBackColor = true;
+            this.rbe23.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe22
             // 
@@ -736,8 +790,10 @@
             this.rbe22.Name = "rbe22";
             this.rbe22.Size = new System.Drawing.Size(54, 17);
             this.rbe22.TabIndex = 21;
+            this.rbe22.Tag = "22";
             this.rbe22.Text = "10 AM";
             this.rbe22.UseVisualStyleBackColor = true;
+            this.rbe22.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe21
             // 
@@ -747,8 +803,10 @@
             this.rbe21.Name = "rbe21";
             this.rbe21.Size = new System.Drawing.Size(50, 17);
             this.rbe21.TabIndex = 20;
+            this.rbe21.Tag = "21";
             this.rbe21.Text = "9 AM";
             this.rbe21.UseVisualStyleBackColor = true;
+            this.rbe21.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe20
             // 
@@ -758,8 +816,10 @@
             this.rbe20.Name = "rbe20";
             this.rbe20.Size = new System.Drawing.Size(50, 17);
             this.rbe20.TabIndex = 19;
+            this.rbe20.Tag = "20";
             this.rbe20.Text = "8 AM";
             this.rbe20.UseVisualStyleBackColor = true;
+            this.rbe20.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe19
             // 
@@ -769,8 +829,10 @@
             this.rbe19.Name = "rbe19";
             this.rbe19.Size = new System.Drawing.Size(50, 17);
             this.rbe19.TabIndex = 18;
+            this.rbe19.Tag = "19";
             this.rbe19.Text = "7 AM";
             this.rbe19.UseVisualStyleBackColor = true;
+            this.rbe19.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe18
             // 
@@ -780,8 +842,10 @@
             this.rbe18.Name = "rbe18";
             this.rbe18.Size = new System.Drawing.Size(50, 17);
             this.rbe18.TabIndex = 17;
+            this.rbe18.Tag = "18";
             this.rbe18.Text = "6 AM";
             this.rbe18.UseVisualStyleBackColor = true;
+            this.rbe18.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe17
             // 
@@ -791,8 +855,10 @@
             this.rbe17.Name = "rbe17";
             this.rbe17.Size = new System.Drawing.Size(50, 17);
             this.rbe17.TabIndex = 16;
+            this.rbe17.Tag = "17";
             this.rbe17.Text = "5 AM";
             this.rbe17.UseVisualStyleBackColor = true;
+            this.rbe17.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe16
             // 
@@ -802,8 +868,10 @@
             this.rbe16.Name = "rbe16";
             this.rbe16.Size = new System.Drawing.Size(50, 17);
             this.rbe16.TabIndex = 15;
+            this.rbe16.Tag = "16";
             this.rbe16.Text = "4 AM";
             this.rbe16.UseVisualStyleBackColor = true;
+            this.rbe16.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe15
             // 
@@ -813,8 +881,10 @@
             this.rbe15.Name = "rbe15";
             this.rbe15.Size = new System.Drawing.Size(50, 17);
             this.rbe15.TabIndex = 14;
+            this.rbe15.Tag = "15";
             this.rbe15.Text = "3 AM";
             this.rbe15.UseVisualStyleBackColor = true;
+            this.rbe15.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe14
             // 
@@ -824,8 +894,10 @@
             this.rbe14.Name = "rbe14";
             this.rbe14.Size = new System.Drawing.Size(50, 17);
             this.rbe14.TabIndex = 13;
+            this.rbe14.Tag = "14";
             this.rbe14.Text = "2 AM";
             this.rbe14.UseVisualStyleBackColor = true;
+            this.rbe14.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe13
             // 
@@ -835,8 +907,10 @@
             this.rbe13.Name = "rbe13";
             this.rbe13.Size = new System.Drawing.Size(48, 17);
             this.rbe13.TabIndex = 12;
+            this.rbe13.Tag = "13";
             this.rbe13.Text = "1 AM";
             this.rbe13.UseVisualStyleBackColor = true;
+            this.rbe13.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe12
             // 
@@ -846,8 +920,10 @@
             this.rbe12.Name = "rbe12";
             this.rbe12.Size = new System.Drawing.Size(54, 17);
             this.rbe12.TabIndex = 11;
+            this.rbe12.Tag = "12";
             this.rbe12.Text = "12 AM";
             this.rbe12.UseVisualStyleBackColor = true;
+            this.rbe12.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe11
             // 
@@ -857,8 +933,10 @@
             this.rbe11.Name = "rbe11";
             this.rbe11.Size = new System.Drawing.Size(52, 17);
             this.rbe11.TabIndex = 10;
+            this.rbe11.Tag = "11";
             this.rbe11.Text = "11 AM";
             this.rbe11.UseVisualStyleBackColor = true;
+            this.rbe11.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe10
             // 
@@ -868,8 +946,10 @@
             this.rbe10.Name = "rbe10";
             this.rbe10.Size = new System.Drawing.Size(54, 17);
             this.rbe10.TabIndex = 9;
+            this.rbe10.Tag = "10";
             this.rbe10.Text = "10 AM";
             this.rbe10.UseVisualStyleBackColor = true;
+            this.rbe10.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe9
             // 
@@ -879,8 +959,10 @@
             this.rbe9.Name = "rbe9";
             this.rbe9.Size = new System.Drawing.Size(50, 17);
             this.rbe9.TabIndex = 8;
+            this.rbe9.Tag = "9";
             this.rbe9.Text = "9 AM";
             this.rbe9.UseVisualStyleBackColor = true;
+            this.rbe9.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe8
             // 
@@ -890,8 +972,10 @@
             this.rbe8.Name = "rbe8";
             this.rbe8.Size = new System.Drawing.Size(50, 17);
             this.rbe8.TabIndex = 7;
+            this.rbe8.Tag = "8";
             this.rbe8.Text = "8 AM";
             this.rbe8.UseVisualStyleBackColor = true;
+            this.rbe8.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe7
             // 
@@ -901,8 +985,10 @@
             this.rbe7.Name = "rbe7";
             this.rbe7.Size = new System.Drawing.Size(50, 17);
             this.rbe7.TabIndex = 6;
+            this.rbe7.Tag = "7";
             this.rbe7.Text = "7 AM";
             this.rbe7.UseVisualStyleBackColor = true;
+            this.rbe7.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe6
             // 
@@ -912,8 +998,10 @@
             this.rbe6.Name = "rbe6";
             this.rbe6.Size = new System.Drawing.Size(50, 17);
             this.rbe6.TabIndex = 5;
+            this.rbe6.Tag = "6";
             this.rbe6.Text = "6 AM";
             this.rbe6.UseVisualStyleBackColor = true;
+            this.rbe6.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe5
             // 
@@ -923,8 +1011,10 @@
             this.rbe5.Name = "rbe5";
             this.rbe5.Size = new System.Drawing.Size(50, 17);
             this.rbe5.TabIndex = 4;
+            this.rbe5.Tag = "5";
             this.rbe5.Text = "5 AM";
             this.rbe5.UseVisualStyleBackColor = true;
+            this.rbe5.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe4
             // 
@@ -934,8 +1024,10 @@
             this.rbe4.Name = "rbe4";
             this.rbe4.Size = new System.Drawing.Size(50, 17);
             this.rbe4.TabIndex = 3;
+            this.rbe4.Tag = "4";
             this.rbe4.Text = "4 AM";
             this.rbe4.UseVisualStyleBackColor = true;
+            this.rbe4.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe3
             // 
@@ -945,32 +1037,37 @@
             this.rbe3.Name = "rbe3";
             this.rbe3.Size = new System.Drawing.Size(50, 17);
             this.rbe3.TabIndex = 2;
+            this.rbe3.Tag = "3";
             this.rbe3.Text = "3 AM";
             this.rbe3.UseVisualStyleBackColor = true;
+            this.rbe3.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe2
             // 
             this.rbe2.AutoSize = true;
-            this.rbe2.Checked = true;
             this.rbe2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbe2.Location = new System.Drawing.Point(6, 41);
             this.rbe2.Name = "rbe2";
             this.rbe2.Size = new System.Drawing.Size(50, 17);
             this.rbe2.TabIndex = 1;
-            this.rbe2.TabStop = true;
+            this.rbe2.Tag = "2";
             this.rbe2.Text = "2 AM";
             this.rbe2.UseVisualStyleBackColor = true;
+            this.rbe2.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // rbe1
             // 
             this.rbe1.AutoSize = true;
+            this.rbe1.Enabled = false;
             this.rbe1.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbe1.Location = new System.Drawing.Point(6, 18);
             this.rbe1.Name = "rbe1";
             this.rbe1.Size = new System.Drawing.Size(48, 17);
             this.rbe1.TabIndex = 0;
+            this.rbe1.Tag = "1";
             this.rbe1.Text = "1 AM";
             this.rbe1.UseVisualStyleBackColor = true;
+            this.rbe1.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
             // tabControl1
             // 
@@ -1061,14 +1158,25 @@
             this.tabPage2.Text = "Floor 2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(445, 82);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // BookSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.startGroupBox);
+            this.Controls.Add(this.endTimeGroupBox);
+            this.Controls.Add(this.startTimeGroupBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.incrementDateButton);
             this.Controls.Add(this.decrementDateButton);
@@ -1079,11 +1187,12 @@
             this.Controls.Add(this.label1);
             this.Name = "BookSchedule";
             this.Size = new System.Drawing.Size(958, 711);
+            this.Load += new System.EventHandler(this.BookSchedule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.startGroupBox.ResumeLayout(false);
-            this.startGroupBox.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.startTimeGroupBox.ResumeLayout(false);
+            this.startTimeGroupBox.PerformLayout();
+            this.endTimeGroupBox.ResumeLayout(false);
+            this.endTimeGroupBox.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableContainer.ResumeLayout(false);
@@ -1103,7 +1212,7 @@
         private Button incrementDateButton;
         private ToolTip toolTip1;
         private Label label4;
-        private GroupBox startGroupBox;
+        private GroupBox startTimeGroupBox;
         private RadioButton rbs24;
         private RadioButton rbs23;
         private RadioButton rbs22;
@@ -1128,7 +1237,7 @@
         private RadioButton rbs3;
         private RadioButton rbs2;
         private RadioButton rbs1;
-        private GroupBox groupBox1;
+        private GroupBox endTimeGroupBox;
         private RadioButton rbe24;
         private RadioButton rbe23;
         private RadioButton rbe22;
@@ -1172,5 +1281,6 @@
         private Panel panel3;
         private Panel panel2;
         private Panel panel1;
+        private Button button1;
     }
 }
