@@ -41,7 +41,8 @@ namespace TableForTwo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
 
@@ -49,7 +50,8 @@ namespace TableForTwo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.LastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
 
@@ -58,7 +60,8 @@ namespace TableForTwo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.Contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
 
@@ -66,7 +69,8 @@ namespace TableForTwo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.Email.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
 
@@ -74,21 +78,24 @@ namespace TableForTwo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.Username.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
         private void Password_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
         private void Confirm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.Confirm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
 

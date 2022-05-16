@@ -55,9 +55,10 @@ namespace TableForTwo
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            Keys keys = e.KeyCode;
+            if (keys == Keys.Enter)
             {
-                this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
             }
         }
 

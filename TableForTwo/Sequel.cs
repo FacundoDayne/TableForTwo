@@ -69,6 +69,69 @@ namespace TableForTwo
             }
         }
 
+        public static void addReservation(String Username, DateTime Date, int TableNumber, int Members, int StartTime, int EndTime)
+        {
+            using (SqlConnection sqlConne = new SqlConnection(connectionString))
+            {
+                sqlConne.Open();
+                SqlCommand sqlCmd = new SqlCommand("AddReservation", sqlConne);
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                sqlCmd.Parameters.AddWithValue("@Username", Username);
+                sqlCmd.Parameters.AddWithValue("@Date", Date);
+                sqlCmd.Parameters.AddWithValue("@TableNumber", TableNumber);
+                sqlCmd.Parameters.AddWithValue("@Members", Members);
+                sqlCmd.Parameters.AddWithValue("@StartTime", StartTime);
+                sqlCmd.Parameters.AddWithValue("@EndTime", EndTime);
+                sqlCmd.ExecuteNonQuery();
+            }
+        }
+
+        public static void removeRegistration(int ID)
+        {
+            using (SqlConnection sqlConne = new SqlConnection(connectionString))
+            {
+                sqlConne.Open();
+                SqlCommand sqlCmd = new SqlCommand("delete from TBL_Reservations where ID = @ID", sqlConne);
+                sqlCmd.Parameters.AddWithValue("@ID", ID);
+                sqlCmd.ExecuteNonQuery();
+            }
+        }
+
+        public static List<ReservationInformation> listy = new List<ReservationInformation>();
+
+        public static List<ReservationInformation> getReservationByDate(DateTime Date)
+        {
+            using (SqlConnection sqlConne = new SqlConnection(connectionString))
+            {
+                sqlConne.Open();
+                SqlCommand sqlCommand = new SqlCommand("select Username, Date, TableNumber, Members, StartTime, EndTime from TBL_Reservation where Date = @Date", sqlConne);
+                sqlCommand.Parameters.AddWithValue("@Date", Date);
+                using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        while (reader.Read())
+                        {
+                            listy.Add(new ReservationInformation(
+                                reader["Username"].ToString(),
+                                (DateTime)reader["Date"],
+                                (int)reader["TableNumber"],
+                                (int)reader["Members"],
+                                (int)reader["StartTime"],
+                                (int)reader["EndTime"]
+                                ));
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Data Found");
+                    }
+                }
+            }
+
+            return listy;
+
+        }
 
     }
 }

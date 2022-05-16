@@ -108,7 +108,6 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(546, 572);
             this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(267, 23);
             this.textBox2.TabIndex = 6;
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
