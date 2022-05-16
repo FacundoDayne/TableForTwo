@@ -10,18 +10,20 @@ using System.Windows.Forms;
 
 namespace TableForTwo
 {
-    public partial class Welcome : UserControl
+    public partial class Home : UserControl
     {
-        public Welcome()
+        UserInformation loggedInUser = UserInformation.GetLoggedInUser();
+        
+        
+        public Home()
         {
             InitializeComponent();
         }
 
-        //b uc = null;
-        private void button1_Click(object sender, EventArgs e)
+        private void Home_Load(object sender, EventArgs e)
         {
-           // uc = new b();
-           //Controls.Add(uc);
+            string email = loggedInUser.Username;
+            welcome.Text = welcome.Text + email;
         }
     }
 }

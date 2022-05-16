@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TableForTwo
 {
-    public partial class Tables : UserControl
+    public partial class MySchedule : UserControl
     {
-        public Tables()
+        public MySchedule()
         {
             InitializeComponent();
         }
