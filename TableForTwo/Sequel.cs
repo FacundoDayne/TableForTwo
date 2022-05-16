@@ -97,15 +97,53 @@ namespace TableForTwo
             }
         }
 
-        public static List<ReservationInformation> listy = new List<ReservationInformation>();
+
 
         public static List<ReservationInformation> getReservationByDate(DateTime Date)
         {
+
+            List<ReservationInformation> listy = new List<ReservationInformation>();
             using (SqlConnection sqlConne = new SqlConnection(connectionString))
             {
                 sqlConne.Open();
                 SqlCommand sqlCommand = new SqlCommand("select Username, Date, TableNumber, Members, StartTime, EndTime from TBL_Reservation where Date = @Date", sqlConne);
                 sqlCommand.Parameters.AddWithValue("@Date", Date);
+                using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        while (reader.Read())
+                        {
+                            listy.Add(new ReservationInformation(
+                                reader["Username"].ToString(),
+                                (DateTime)reader["Date"],
+                                (int)reader["TableNumber"],
+                                (int)reader["Members"],
+                                (int)reader["StartTime"],
+                                (int)reader["EndTime"]
+                                ));
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Data Found");
+                    }
+                }
+            }
+
+            return listy;
+
+        }
+
+        public static List<ReservationInformation> getReservationByUsername(String Username)
+        {
+
+            List<ReservationInformation> listy = new List<ReservationInformation>();
+            using (SqlConnection sqlConne = new SqlConnection(connectionString))
+            {
+                sqlConne.Open();
+                SqlCommand sqlCommand = new SqlCommand("select Username, Date, TableNumber, Members, StartTime, EndTime from TBL_Reservation where Username = @Username", sqlConne);
+                sqlCommand.Parameters.AddWithValue("@Username", Username);
                 using (SqlDataReader reader = sqlCommand.ExecuteReader())
                 {
                     if (reader.Read())
