@@ -11,7 +11,7 @@ namespace TableForTwo
    
     internal class Sequel
     {
-        static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=B:\Programming\Replay\TableForTwo\TableForTwo\DataBase.mdf;Integrated Security=True";
+        static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=B:\Programming\Replay\TableForTwo\TableForTwo\Resources\DataBase.mdf;Integrated Security=True";
 
         public static void addUser(string FirstName,string LastName,string ContactDetail,string Address,string UserName,string Password)
         {
