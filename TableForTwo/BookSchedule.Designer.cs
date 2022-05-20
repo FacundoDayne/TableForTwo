@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DatePicker = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.MembersCapacity = new System.Windows.Forms.NumericUpDown();
             this.decrementDateButton = new System.Windows.Forms.Button();
             this.incrementDateButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -107,8 +107,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.AddReservationButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.MembersCapacity)).BeginInit();
             this.startTimeGroupBox.SuspendLayout();
             this.endTimeGroupBox.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -127,13 +128,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "BOOK A SCHEDULE";
             // 
-            // dateTimePicker1
+            // DatePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(47, 86);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 1;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.DatePicker.Location = new System.Drawing.Point(47, 86);
+            this.DatePicker.Name = "DatePicker";
+            this.DatePicker.Size = new System.Drawing.Size(200, 23);
+            this.DatePicker.TabIndex = 1;
+            this.DatePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label2
             // 
@@ -159,28 +160,28 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Members:";
             // 
-            // numericUpDown1
+            // MembersCapacity
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(322, 84);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.MembersCapacity.Location = new System.Drawing.Point(322, 84);
+            this.MembersCapacity.Maximum = new decimal(new int[] {
             20,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.MembersCapacity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(98, 23);
-            this.numericUpDown1.TabIndex = 5;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.MembersCapacity.Name = "MembersCapacity";
+            this.MembersCapacity.Size = new System.Drawing.Size(98, 23);
+            this.MembersCapacity.TabIndex = 5;
+            this.MembersCapacity.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.MembersCapacity.ValueChanged += new System.EventHandler(this.MembersCapacityChanged);
             // 
             // decrementDateButton
             // 
@@ -214,9 +215,9 @@
             this.table2K.Name = "table2K";
             this.table2K.Size = new System.Drawing.Size(54, 96);
             this.table2K.TabIndex = 10;
-            this.table2K.Tag = "2";
+            this.table2K.Tag = "2 14";
             this.toolTip1.SetToolTip(this.table2K, "Table for 2");
-            this.table2K.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2K.Click += new System.EventHandler(this.TableClick);
             // 
             // table2E
             // 
@@ -227,9 +228,9 @@
             this.table2E.Name = "table2E";
             this.table2E.Size = new System.Drawing.Size(54, 96);
             this.table2E.TabIndex = 4;
-            this.table2E.Tag = "2";
+            this.table2E.Tag = "2 5";
             this.toolTip1.SetToolTip(this.table2E, "Table for 2");
-            this.table2E.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2E.Click += new System.EventHandler(this.TableClick);
             // 
             // table2H
             // 
@@ -240,9 +241,9 @@
             this.table2H.Name = "table2H";
             this.table2H.Size = new System.Drawing.Size(54, 96);
             this.table2H.TabIndex = 7;
-            this.table2H.Tag = "2";
+            this.table2H.Tag = "2 11";
             this.toolTip1.SetToolTip(this.table2H, "Table for 2");
-            this.table2H.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2H.Click += new System.EventHandler(this.TableClick);
             // 
             // table2B
             // 
@@ -253,9 +254,9 @@
             this.table2B.Name = "table2B";
             this.table2B.Size = new System.Drawing.Size(54, 96);
             this.table2B.TabIndex = 1;
-            this.table2B.Tag = "2";
+            this.table2B.Tag = "2 2";
             this.toolTip1.SetToolTip(this.table2B, "Table for 2");
-            this.table2B.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2B.Click += new System.EventHandler(this.TableClick);
             // 
             // table2L
             // 
@@ -266,9 +267,9 @@
             this.table2L.Name = "table2L";
             this.table2L.Size = new System.Drawing.Size(54, 96);
             this.table2L.TabIndex = 11;
-            this.table2L.Tag = "2";
+            this.table2L.Tag = "2 15";
             this.toolTip1.SetToolTip(this.table2L, "Table for 2");
-            this.table2L.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2L.Click += new System.EventHandler(this.TableClick);
             // 
             // table2F
             // 
@@ -279,9 +280,9 @@
             this.table2F.Name = "table2F";
             this.table2F.Size = new System.Drawing.Size(54, 96);
             this.table2F.TabIndex = 5;
-            this.table2F.Tag = "2";
+            this.table2F.Tag = "2 6";
             this.toolTip1.SetToolTip(this.table2F, "Table for 2");
-            this.table2F.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2F.Click += new System.EventHandler(this.TableClick);
             // 
             // table2I
             // 
@@ -292,9 +293,9 @@
             this.table2I.Name = "table2I";
             this.table2I.Size = new System.Drawing.Size(54, 96);
             this.table2I.TabIndex = 8;
-            this.table2I.Tag = "2";
+            this.table2I.Tag = "2 12";
             this.toolTip1.SetToolTip(this.table2I, "Table for 2");
-            this.table2I.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2I.Click += new System.EventHandler(this.TableClick);
             // 
             // table2C
             // 
@@ -305,9 +306,9 @@
             this.table2C.Name = "table2C";
             this.table2C.Size = new System.Drawing.Size(54, 96);
             this.table2C.TabIndex = 2;
-            this.table2C.Tag = "2";
+            this.table2C.Tag = "2 3";
             this.toolTip1.SetToolTip(this.table2C, "Table for 2");
-            this.table2C.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2C.Click += new System.EventHandler(this.TableClick);
             // 
             // table2J
             // 
@@ -318,9 +319,9 @@
             this.table2J.Name = "table2J";
             this.table2J.Size = new System.Drawing.Size(54, 96);
             this.table2J.TabIndex = 9;
-            this.table2J.Tag = "2";
+            this.table2J.Tag = "2 13";
             this.toolTip1.SetToolTip(this.table2J, "Table for 2");
-            this.table2J.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2J.Click += new System.EventHandler(this.TableClick);
             // 
             // table2D
             // 
@@ -331,9 +332,9 @@
             this.table2D.Name = "table2D";
             this.table2D.Size = new System.Drawing.Size(54, 96);
             this.table2D.TabIndex = 3;
-            this.table2D.Tag = "2";
+            this.table2D.Tag = "2 4";
             this.toolTip1.SetToolTip(this.table2D, "Table for 2");
-            this.table2D.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2D.Click += new System.EventHandler(this.TableClick);
             // 
             // table2G
             // 
@@ -344,9 +345,9 @@
             this.table2G.Name = "table2G";
             this.table2G.Size = new System.Drawing.Size(54, 96);
             this.table2G.TabIndex = 6;
-            this.table2G.Tag = "2";
+            this.table2G.Tag = "2 10";
             this.toolTip1.SetToolTip(this.table2G, "Table for 2");
-            this.table2G.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2G.Click += new System.EventHandler(this.TableClick);
             // 
             // table2A
             // 
@@ -357,9 +358,9 @@
             this.table2A.Name = "table2A";
             this.table2A.Size = new System.Drawing.Size(54, 96);
             this.table2A.TabIndex = 0;
-            this.table2A.Tag = "2";
+            this.table2A.Tag = "2 1";
             this.toolTip1.SetToolTip(this.table2A, "Table for 2");
-            this.table2A.Click += new System.EventHandler(this.TableFor2Click);
+            this.table2A.Click += new System.EventHandler(this.TableClick);
             // 
             // label4
             // 
@@ -399,6 +400,7 @@
             this.startTimeGroupBox.Controls.Add(this.rbs3);
             this.startTimeGroupBox.Controls.Add(this.rbs2);
             this.startTimeGroupBox.Controls.Add(this.rbs1);
+            this.startTimeGroupBox.Enabled = false;
             this.startTimeGroupBox.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.startTimeGroupBox.Location = new System.Drawing.Point(9, 140);
             this.startTimeGroupBox.Name = "startTimeGroupBox";
@@ -709,13 +711,11 @@
             // rbs1
             // 
             this.rbs1.AutoSize = true;
-            this.rbs1.Checked = true;
             this.rbs1.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbs1.Location = new System.Drawing.Point(6, 18);
             this.rbs1.Name = "rbs1";
             this.rbs1.Size = new System.Drawing.Size(48, 17);
             this.rbs1.TabIndex = 0;
-            this.rbs1.TabStop = true;
             this.rbs1.Tag = "1";
             this.rbs1.Text = "1 AM";
             this.rbs1.UseVisualStyleBackColor = true;
@@ -1123,8 +1123,8 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(127, 127);
             this.panel3.TabIndex = 14;
-            this.panel3.Tag = "4";
-            this.panel3.Click += new System.EventHandler(this.TableFor4Click);
+            this.panel3.Tag = "4 8";
+            this.panel3.Click += new System.EventHandler(this.TableClick);
             // 
             // panel2
             // 
@@ -1134,8 +1134,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(127, 127);
             this.panel2.TabIndex = 13;
-            this.panel2.Tag = "4";
-            this.panel2.Click += new System.EventHandler(this.TableFor4Click);
+            this.panel2.Tag = "4 9";
+            this.panel2.Click += new System.EventHandler(this.TableClick);
             // 
             // panel1
             // 
@@ -1145,8 +1145,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(127, 127);
             this.panel1.TabIndex = 12;
-            this.panel1.Tag = "4";
-            this.panel1.Click += new System.EventHandler(this.TableFor4Click);
+            this.panel1.Tag = "4 7";
+            this.panel1.Click += new System.EventHandler(this.TableClick);
             // 
             // tabPage2
             // 
@@ -1158,37 +1158,62 @@
             this.tabPage2.Text = "Floor 2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // AddReservationButton
             // 
-            this.button1.Location = new System.Drawing.Point(445, 82);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.AddReservationButton.BackColor = System.Drawing.Color.YellowGreen;
+            this.AddReservationButton.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.AddReservationButton.FlatAppearance.BorderSize = 0;
+            this.AddReservationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.YellowGreen;
+            this.AddReservationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.YellowGreen;
+            this.AddReservationButton.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddReservationButton.ForeColor = System.Drawing.Color.White;
+            this.AddReservationButton.Location = new System.Drawing.Point(813, 84);
+            this.AddReservationButton.Name = "AddReservationButton";
+            this.AddReservationButton.Size = new System.Drawing.Size(142, 48);
+            this.AddReservationButton.TabIndex = 25;
+            this.AddReservationButton.Text = "Add Reservation";
+            this.AddReservationButton.UseVisualStyleBackColor = false;
+            this.AddReservationButton.Click += new System.EventHandler(this.AddReservatoinButton_Click);
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.BackColor = System.Drawing.Color.LightCoral;
+            this.ClearButton.FlatAppearance.BorderColor = System.Drawing.Color.LightCoral;
+            this.ClearButton.FlatAppearance.BorderSize = 0;
+            this.ClearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
+            this.ClearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.ClearButton.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.Location = new System.Drawing.Point(665, 84);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(142, 48);
+            this.ClearButton.TabIndex = 26;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = false;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // BookSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ClearButton);
+            this.Controls.Add(this.AddReservationButton);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.endTimeGroupBox);
             this.Controls.Add(this.startTimeGroupBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.incrementDateButton);
             this.Controls.Add(this.decrementDateButton);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.MembersCapacity);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DatePicker);
             this.Controls.Add(this.label1);
             this.Name = "BookSchedule";
             this.Size = new System.Drawing.Size(958, 711);
             this.Load += new System.EventHandler(this.BookSchedule_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MembersCapacity)).EndInit();
             this.startTimeGroupBox.ResumeLayout(false);
             this.startTimeGroupBox.PerformLayout();
             this.endTimeGroupBox.ResumeLayout(false);
@@ -1204,10 +1229,10 @@
         #endregion
 
         private Label label1;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker DatePicker;
         private Label label2;
         private Label label3;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown MembersCapacity;
         private Button decrementDateButton;
         private Button incrementDateButton;
         private ToolTip toolTip1;
@@ -1281,6 +1306,7 @@
         private Panel panel3;
         private Panel panel2;
         private Panel panel1;
-        private Button button1;
+        private Button AddReservationButton;
+        private Button ClearButton;
     }
 }

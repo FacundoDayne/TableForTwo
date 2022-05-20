@@ -11,7 +11,8 @@ namespace TableForTwo
    
     internal class Sequel
     {
-        static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=B:\Programming\Replay\TableForTwo\TableForTwo\DataBase.mdf;Integrated Security=True";
+        // static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=B:\Programming\Replay\TableForTwo\TableForTwo\DataBase.mdf;Integrated Security=True";
+        static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Mark Edison Pelo\source\repos\TableForTwo\TableForTwo\DataBase.mdf;Integrated Security=True";
 
         public static void addUser(string FirstName,string LastName,string ContactDetail,string Address,string UserName,string Password)
         {
@@ -91,7 +92,7 @@ namespace TableForTwo
             using (SqlConnection sqlConne = new SqlConnection(connectionString))
             {
                 sqlConne.Open();
-                SqlCommand sqlCmd = new SqlCommand("delete from TBL_Reservations where ID = @ID", sqlConne);
+                SqlCommand sqlCmd = new SqlCommand("delete from TBL_Reservations where ID=@ID", sqlConne);
                 sqlCmd.Parameters.AddWithValue("@ID", ID);
                 sqlCmd.ExecuteNonQuery();
             }
@@ -101,32 +102,28 @@ namespace TableForTwo
 
         public static List<ReservationInformation> getReservationByDate(DateTime Date)
         {
-
             List<ReservationInformation> listy = new List<ReservationInformation>();
             using (SqlConnection sqlConne = new SqlConnection(connectionString))
             {
                 sqlConne.Open();
-                SqlCommand sqlCommand = new SqlCommand("select Username, Date, TableNumber, Members, StartTime, EndTime from TBL_Reservation where Date = @Date", sqlConne);
+                SqlCommand sqlCommand = new SqlCommand("select ID, Username, Date, TableNumber, Members, StartTime, EndTime from TBL_Reservations where Date = @Date", sqlConne);
                 sqlCommand.Parameters.AddWithValue("@Date", Date);
                 using (SqlDataReader reader = sqlCommand.ExecuteReader())
                 {
-                    if (reader.Read())
+                    while (reader.Read())
                     {
-                        while (reader.Read())
-                        {
-                            listy.Add(new ReservationInformation(
-                                reader["Username"].ToString(),
-                                (DateTime)reader["Date"],
-                                (int)reader["TableNumber"],
-                                (int)reader["Members"],
-                                (int)reader["StartTime"],
-                                (int)reader["EndTime"]
-                                ));
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("No Data Found");
+                        ReservationInformation reservation = new ReservationInformation(
+                            reader["Username"].ToString(),
+                            (DateTime)reader["Date"],
+                            (int)reader["TableNumber"],
+                            (int)reader["Members"],
+                            (int)reader["StartTime"],
+                            (int)reader["EndTime"]
+                            );
+
+                        reservation.ID = (int)reader["ID"];
+
+                        listy.Add(reservation);
                     }
                 }
             }
@@ -142,27 +139,24 @@ namespace TableForTwo
             using (SqlConnection sqlConne = new SqlConnection(connectionString))
             {
                 sqlConne.Open();
-                SqlCommand sqlCommand = new SqlCommand("select Username, Date, TableNumber, Members, StartTime, EndTime from TBL_Reservation where Username = @Username", sqlConne);
+                SqlCommand sqlCommand = new SqlCommand("select ID, Username, Date, TableNumber, Members, StartTime, EndTime from TBL_Reservations where Username = @Username order by Date, StartTime", sqlConne);
                 sqlCommand.Parameters.AddWithValue("@Username", Username);
                 using (SqlDataReader reader = sqlCommand.ExecuteReader())
                 {
-                    if (reader.Read())
+                    while (reader.Read())
                     {
-                        while (reader.Read())
-                        {
-                            listy.Add(new ReservationInformation(
-                                reader["Username"].ToString(),
-                                (DateTime)reader["Date"],
-                                (int)reader["TableNumber"],
-                                (int)reader["Members"],
-                                (int)reader["StartTime"],
-                                (int)reader["EndTime"]
-                                ));
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("No Data Found");
+                        ReservationInformation reservation = new ReservationInformation(
+                            reader["Username"].ToString(),
+                            (DateTime)reader["Date"],
+                            (int)reader["TableNumber"],
+                            (int)reader["Members"],
+                            (int)reader["StartTime"],
+                            (int)reader["EndTime"]
+                            );
+
+                        reservation.ID = (int)reader["ID"];
+
+                        listy.Add(reservation);
                     }
                 }
             }

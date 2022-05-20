@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // label2
@@ -42,14 +43,24 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "MY SCHEDULES";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 61);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(952, 647);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
             // MySchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Name = "MySchedule";
             this.Size = new System.Drawing.Size(958, 711);
+            this.Load += new System.EventHandler(this.MySchedule_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -57,5 +68,6 @@
 
         #endregion
         private Label label2;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
