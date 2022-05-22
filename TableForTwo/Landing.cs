@@ -46,6 +46,7 @@ namespace TableForTwo
         private void button2_Click(object sender, EventArgs e)
         {
             signup1.Show();
+            label4.Hide();
         }
 
         private void Landing_FormClosed(object sender, FormClosedEventArgs e)

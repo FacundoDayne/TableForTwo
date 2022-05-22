@@ -23,15 +23,22 @@ namespace TableForTwo
             if (Username.Text == ""|| Password.Text == "" || Confirm.Text == "" || 
                 Username.Text == " " || Password.Text == " " || Confirm.Text == " ")
             {
-                label4.Show(); label13.Hide();
+                label4.Show(); label13.Hide(); label14.Hide();
             }
             else if(Password.Text != Confirm.Text){
-                label4.Hide();  label13.Show(); 
+                label4.Hide();  label13.Show(); label14.Hide();
             }
             else
             {
-                Sequel.addUser(FirstName.Text, LastName.Text, Contact.Text, Email.Text, Username.Text, Password.Text);                
-                this.Hide();
+                if (!Sequel.checkUsername(Username.Text.Trim()))
+                {
+                    Sequel.addUser(FirstName.Text, LastName.Text, Contact.Text, Email.Text, Username.Text, Password.Text);
+                    this.Hide();
+                }
+                else
+                {
+                    label4.Hide(); label13.Hide(); label14.Show();
+                }
             }
         }
 
