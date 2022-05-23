@@ -27,6 +27,7 @@ namespace TableForTwo
                 sqlCmd.Parameters.AddWithValue("@ContactDetail", ContactDetail.Trim());
                 sqlCmd.Parameters.AddWithValue("@EmailAddress", Address.Trim());
                 sqlCmd.ExecuteNonQuery();
+                sqlConne.Close();
             }
         }
 
@@ -46,6 +47,7 @@ namespace TableForTwo
                 {
                     return false;
                 }
+                sqlConne.Close();
             }
 
         }
@@ -66,6 +68,7 @@ namespace TableForTwo
                 {
                     return false;
                 }
+                sqlConne.Close();
             }
         }
 
@@ -83,6 +86,7 @@ namespace TableForTwo
                 sqlCmd.Parameters.AddWithValue("@StartTime", StartTime);
                 sqlCmd.Parameters.AddWithValue("@EndTime", EndTime);
                 sqlCmd.ExecuteNonQuery();
+                sqlConne.Close();
             }
         }
 
@@ -94,6 +98,7 @@ namespace TableForTwo
                 SqlCommand sqlCmd = new SqlCommand("delete from TBL_Reservations where ID=@ID", sqlConne);
                 sqlCmd.Parameters.AddWithValue("@ID", ID);
                 sqlCmd.ExecuteNonQuery();
+                sqlConne.Close();
             }
         }
 
@@ -125,6 +130,7 @@ namespace TableForTwo
                         listy.Add(reservation);
                     }
                 }
+                sqlConne.Close();
             }
 
             return listy;
@@ -158,6 +164,7 @@ namespace TableForTwo
                         listy.Add(reservation);
                     }
                 }
+                sqlConne.Close();
             }
 
             return listy;
