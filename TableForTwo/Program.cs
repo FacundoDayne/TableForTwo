@@ -6,6 +6,9 @@ namespace TableForTwo
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
+
+        //  Program made by Bernal Lawerence, Facundo Rutziv, Pelo Mark, and Vargas Aeron
+
         static void Main()
         {
             // To customize application configuration such as set high DPI settings or default font,

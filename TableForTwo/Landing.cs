@@ -46,6 +46,7 @@ namespace TableForTwo
         private void button2_Click(object sender, EventArgs e)
         {
             signup1.Show();
+            label4.Hide();
         }
 
         private void Landing_FormClosed(object sender, FormClosedEventArgs e)
@@ -55,9 +56,10 @@ namespace TableForTwo
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            Keys keys = e.KeyCode;
+            if (keys == Keys.Enter)
             {
-                this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
             }
         }
 

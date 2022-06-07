@@ -52,6 +52,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -280,18 +281,31 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.Maroon;
-            this.label13.Location = new System.Drawing.Point(522, 536);
+            this.label13.Location = new System.Drawing.Point(546, 536);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(198, 18);
             this.label13.TabIndex = 26;
             this.label13.Text = "Passwords are not the same";
             this.label13.Visible = false;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.Maroon;
+            this.label14.Location = new System.Drawing.Point(579, 567);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(133, 18);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "User already exists";
+            this.label14.Visible = false;
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label12);
@@ -350,5 +364,6 @@
         private Label label12;
         private Label label4;
         private Label label13;
+        private Label label14;
     }
 }

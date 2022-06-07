@@ -17,33 +17,102 @@ namespace TableForTwo
         List<int> availableStartTime = new List<int>();
         List<int> availableEndTime = new List<int>();
 
+        RadioButton? selectedStartTime;
+        RadioButton? selectedEndTime;
+
         public BookSchedule()
         {
             InitializeComponent();
+
         }
 
         private void BookSchedule_Load(object sender, EventArgs e)
         {
+            FormReset();
+        }
+
+        private void FetchAndRenderTime()
+        {
             SetAvailableTimeDefault();
+
+            List<ReservationInformation> reservations = Sequel.getReservationByDate(DatePicker.Value.Date);
+
+            List<ReservationInformation> reservationsFromTable = new List<ReservationInformation>();
+
+            if (selectedTable is null)
+            {
+                return;
+            }
+            
+
+            foreach (ReservationInformation reservation in reservations)
+            {
+
+                if (GetTableNumber(selectedTable) != reservation.TableNumber)
+                {
+                    continue;
+                }
+
+                reservationsFromTable.Add(reservation);
+            }
+
+            reservationsFromTable.ForEach(delegate (ReservationInformation reservation)
+            {
+                for (int i = reservation.StartTime; i < reservation.EndTime; i++)
+                {
+                    availableStartTime.Remove(i);
+                }
+
+                for (int i = reservation.StartTime; i <= reservation.EndTime; i++)
+                {
+                    availableEndTime.Remove(i);
+                }
+            });
+
+            RenderTime();
+        }
+        private void FormReset()
+        {
+            FetchAndRenderTime();
+
+            if (selectedTable != null)
+                SetTableAvailable(selectedTable);
+            selectedTable = null;
+
+            DatePicker.Value = DateTime.Today;
+
+            MembersCapacity.Value = 1;
+
+            startTimeGroupBox.Enabled = false;
+
+            endTimeGroupBox.Enabled = false;
+
+            DeselectSelectedTimes();
         }
 
         private void SetAvailableTimeDefault()
         {
+            availableStartTime = new List<int>();
+            availableEndTime = new List<int>();
+
             for (int i = 1; i <= 24; i++)
             {
                 availableStartTime.Add(i);
                 availableEndTime.Add(i);
             }
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            if (dateTimePicker1.Value.Date < DateTime.Today.Date)
+            FetchAndRenderTime();
+
+            if (DatePicker.Value.Date < DateTime.Today.Date)
             {
-                dateTimePicker1.Value = DateTime.Today;
+                DatePicker.Value = DateTime.Today;
                 MessageBox.Show("Error", "The date selected is not available anymore.", MessageBoxButtons.OK);
             }
-            else if (dateTimePicker1.Value.Date == DateTime.Today.Date)
+            else if (DatePicker.Value.Date == DateTime.Today.Date)
             {
                 decrementDateButton.Enabled = false;
             }
@@ -55,139 +124,187 @@ namespace TableForTwo
 
         private void decrementDateButton_Click(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = dateTimePicker1.Value.AddDays(-1);
+            DatePicker.Value = DatePicker.Value.AddDays(-1);
         }
 
         private void incrementDateButton_Click(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = dateTimePicker1.Value.AddDays(1);
+            DatePicker.Value = DatePicker.Value.AddDays(1);
+        }
+
+        private void TableClick(object sender, EventArgs e)
+        {
+            startTimeGroupBox.Enabled = true;
+            endTimeGroupBox.Enabled = true;
+
+            Panel clickedTable = (Panel)sender;
+
+            if (clickedTable == selectedTable)
+                return;
+
+
+            if (selectedTable != null)
+            {
+                SetTableAvailable(selectedTable);
+            }
+
+            SetTableSelected(clickedTable);
+            selectedTable = clickedTable;
+
+
+            FetchAndRenderTime();
+
+            RenderTime();
+            DeselectSelectedTimes();
         }
 
         private void SetTableAvailable(Panel table)
         {
-            if (table.Tag.Equals("2"))
-            {
-                table.BackgroundImage = Properties.Resources.TableAvailable;
-            }
-            else if (table.Tag.Equals("4"))
-            {
-                table.BackgroundImage = Properties.Resources.TableFor4Available;
-            }
-
             table.Enabled = true;
-        }
-
-        private void SetTableSelected(Panel table)
-        {
-            if (table.Tag.Equals("2"))
+            switch (GetTableCapacity(table))
             {
-                table.BackgroundImage = Properties.Resources.TableSelected;
+                case 2:
+                    table.BackgroundImage = Properties.Resources.TableAvailable;
+                    break;
+                case 4:
+                    table.BackgroundImage = Properties.Resources.TableFor4Available;
+                    break;
             }
-            else if (table.Tag.Equals("4"))
-            {
-                table.BackgroundImage = Properties.Resources.TableFor4Selected;
-            }
-            
-            selectedTable = table;
-            table.Enabled = true;
         }
 
         private void SetTableUnavailable(Panel table)
         {
-            if (table.Tag.Equals("2"))
-            {
-                table.BackgroundImage = Properties.Resources.TableUnavailable;
-            }
-            else if (table.Tag.Equals("4"))
-            {
-                table.BackgroundImage = Properties.Resources.TableFor4Unavailable;
-            }
-
             table.Enabled = false;
+            switch (GetTableCapacity(table))
+            {
+                case 2:
+                    table.BackgroundImage = Properties.Resources.TableUnavailable;
+                    break;
+                case 4:
+                    table.BackgroundImage = Properties.Resources.TableFor4Unavailable;
+                    break;
+            }
         }
 
-        private void TableFor2Click(object sender, EventArgs e)
+        private void SetTableSelected(Panel table)
         {
-            if (!((Panel)sender).Enabled)
-                return;
-
-            if (selectedTable != null)
-                SetTableAvailable(selectedTable);
-
-            Panel table = (Panel)sender;
-            SetTableSelected(table);
+            table.Enabled = true;
+            switch (GetTableCapacity(table))
+            {
+                case 2:
+                    table.BackgroundImage = Properties.Resources.TableSelected;
+                    break;
+                case 4:
+                    table.BackgroundImage = Properties.Resources.TableFor4Selected;
+                    break;
+            }
         }
 
-        private void TableFor4Click(object sender, EventArgs e)
+        private Panel? GetTableByID(int ID)
         {
-            if (!((Panel)sender).Enabled)
-                return;
+            TabPage selectedTab = tabControl1.SelectedTab;
 
-            if (selectedTable != null)
-                SetTableAvailable(selectedTable);
+            foreach(Control control in selectedTab.Controls)
+            {
+                if (control is Panel && GetTableNumber((Panel)control) == ID)
+                {
+                    return (Panel)control;
+                }
+            }
 
-            Panel table = (Panel)sender;
-            SetTableSelected(table);
+            return null;
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private int GetTableCapacity(Panel table)
+        {
+            string tag = (string)table.Tag;
+            return int.Parse(GetWordByIndex(tag, 0));
+        }
+
+        private int GetTableNumber(Panel table)
+        {
+            string tag = (string)table.Tag;
+
+            return int.Parse(GetWordByIndex(tag, 1));
+        }
+
+        private string GetWordByIndex(string s, int index)
+        {
+            return s.Split(' ')[index];
+        }
+
+        private void ToggleTablesWithNCapacity(int capacity)
         {
             selectedTable = null;
+            startTimeGroupBox.Enabled = false;
+            endTimeGroupBox.Enabled = false;
 
-            if (((NumericUpDown)sender).Value <= 2)
+            DeselectSelectedTimes();
+
+            foreach (Control tabPage in tabControl1.Controls)
             {
-                SetTableFor2Available();
-                SetTableFor4Available();
-            }
-            else if (((NumericUpDown)sender).Value <= 4)
-            {
-                SetTableFor2Unavailable();
-                SetTableFor4Available();
-            }
-            else
-            {
-                SetTableFor2Unavailable();
-                SetTableFor4Unavailable();
+                if (tabPage is not TabPage)
+                    continue;
+                
+                foreach (Control panel in tabPage.Controls)
+                {
+                    if (panel is not Panel)
+                        continue;
+
+                    foreach (Control table in panel.Controls)
+                    {
+                        if (table is not Panel)
+                            continue;
+
+                        Panel table_ = (Panel)table;
+                        if (GetTableCapacity(table_) <= capacity)
+                            SetTableUnavailable(table_);
+                        else
+                            SetTableAvailable(table_);
+                    }
+                }
             }
         }
 
-        private void SetTableFor2Available()
+        private void MembersCapacityChanged(object sender, EventArgs e)
         {
-            foreach (Control table in tableContainer.Controls)
+            int newCapacity = ((int)((NumericUpDown)sender).Value);
+
+            ToggleTablesWithNCapacity(newCapacity - 1);
+        }
+
+        private void RenderTime()
+        {
+            RenderStartTime();
+            RenderEndTime();
+        }
+
+        private void RenderEndTime()
+        {
+            for (int i=1; i<=24; i++)
             {
-                if (table is Panel && table.Tag.Equals("2"))
+                if (availableEndTime.Contains(i))
                 {
-                    SetTableAvailable((Panel)table);
+                    ToggleEndTimeByTag(i, true);
+                }
+                else
+                {
+                    ToggleEndTimeByTag(i, false);
                 }
             }
         }
-        private void SetTableFor2Unavailable()
+
+        private void RenderStartTime()
         {
-            foreach (Control table in tableContainer.Controls)
+            for (int i = 1; i <= 24; i++)
             {
-                if (table is Panel && table.Tag.Equals("2"))
+                if (availableStartTime.Contains(i))
                 {
-                    SetTableUnavailable((Panel)table);
+                    ToggleStartTimeByTag(i, true);
                 }
-            }
-        }
-        private void SetTableFor4Available()
-        {
-            foreach (Control table in tableContainer.Controls)
-            {
-                if (table is Panel && table.Tag.Equals("4"))
+                else
                 {
-                    SetTableAvailable((Panel)table);
-                }
-            }
-        }
-        private void SetTableFor4Unavailable()
-        {
-            foreach (Control table in tableContainer.Controls)
-            {
-                if (table is Panel && table.Tag.Equals("4"))
-                {
-                    SetTableUnavailable((Panel)table);
+                    ToggleStartTimeByTag(i, false);
                 }
             }
         }
@@ -195,92 +312,110 @@ namespace TableForTwo
         private void StartTimeCheckChanged(object sender, EventArgs e)
         {
             RadioButton source = (RadioButton)sender;
-            string tag = (string)source.Tag;
+            int time = int.Parse((string)source.Tag);
+
+            RenderEndTime();
+
+            if (!source.Checked)
+                return;
+
+            for (int i=1; i<=time; i++)
+            {
+                ToggleEndTimeByTag(i, false);
+            }
 
             if (source.Checked)
-            {
-                DisableEndTimeRadioButtonByTag(tag); 
-            }
-            else
-            {
-                if (availableEndTime.Contains(int.Parse(tag)))
-                {
-                    EnableEndTimeRadioButtonByTag(tag);
-                }
-            }
-
-            endTimeGroupBox.Enabled = true;
+                selectedStartTime = source;
         }
 
         private void EndTimeCheckChanged(object sender, EventArgs e)
         {
             RadioButton source = (RadioButton)sender;
-            string tag = (string)source.Tag;
+
+            RenderStartTime();
 
             if (source.Checked)
+                selectedEndTime = source;
+            // ToggleStartTimeByTag(int.Parse((string)source.Tag), false);
+        }
+
+        private void DeselectSelectedTimes()
+        {
+            if (selectedStartTime is not null)
+                selectedStartTime.Checked = false;
+
+            if (selectedEndTime is not null)
+                selectedEndTime.Checked = false;
+
+            selectedStartTime = selectedEndTime = null;
+        }
+
+        private void AddReservatoinButton_Click(object sender, EventArgs e)
+        {
+            string username = UserInformation.GetLoggedInUser().Username;
+            DateTime date = DatePicker.Value.Date;
+
+            if (selectedTable is null)
             {
-                DisableStartTimeRadioButtonByTag(tag);
+                MessageBox.Show("Please select a table.", "Unable to add reservation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            int tableNumber = GetTableNumber(selectedTable);
+            int members = (int)MembersCapacity.Value;
+
+            if (selectedStartTime is null || selectedEndTime is null)
             {
-                if (availableEndTime.Contains(int.Parse(tag)))
-                {
-                    EnableStartTimeRadioButtonByTag(tag);
+                MessageBox.Show("Please select a time.", "Unable to add reservation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int startTime = int.Parse((string)selectedStartTime.Tag);
+            int endTime = int.Parse((string)selectedEndTime.Tag);
+
+            Sequel.addReservation(username, date, tableNumber, members, startTime, endTime);
+
+            MessageBox.Show("Reservation Added.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            FormReset();
+        }
+
+
+        private void ToggleStartTimeByTag(int tag, bool value)
+        {
+            foreach (Control radioButton in startTimeGroupBox.Controls)
+            {
+                if (radioButton is RadioButton && int.Parse((string)radioButton.Tag) == tag)
+                { 
+                    radioButton.Enabled = value;
+                    if (!value)
+                    {
+                        ((RadioButton)radioButton).Checked = false;
+                    }
                 }
             }
         }
 
-        private void DisableStartTimeRadioButtonByTag(string tag)
+        private void ToggleEndTimeByTag(int tag, bool value)
         {
-            foreach (Control timeCheckBox in startTimeGroupBox.Controls)
+            foreach (Control radioButton in endTimeGroupBox.Controls)
             {
-                if (timeCheckBox is RadioButton && timeCheckBox.Tag.Equals(tag))
+                if (radioButton is RadioButton && int.Parse((string)radioButton.Tag) == tag)
                 {
-                    ((RadioButton)timeCheckBox).Checked = false;
-                    timeCheckBox.Enabled = false;
+                    radioButton.Enabled = value;
+
+                    if (!value)
+                    {
+                        ((RadioButton)radioButton).Checked = false;
+                    }
                 }
             }
         }
 
-        private void EnableStartTimeRadioButtonByTag(string tag)
+        private void ClearButton_Click(object sender, EventArgs e)
         {
-            foreach (Control timeCheckBox in startTimeGroupBox.Controls)
-            {
-                if (timeCheckBox is RadioButton && timeCheckBox.Tag.Equals(tag))
-                {
-                    timeCheckBox.Enabled = true;
-                }
-            }
+            FormReset();
         }
 
-        private void DisableEndTimeRadioButtonByTag(string tag)
-        {
-            foreach (Control timeCheckBox in endTimeGroupBox.Controls)
-            {
-                if (timeCheckBox is RadioButton && timeCheckBox.Tag.Equals(tag))
-                {
-                    ((RadioButton)timeCheckBox).Checked = false;
-                    timeCheckBox.Enabled = false;
-                }
-            }
-        }
-
-        private void EnableEndTimeRadioButtonByTag(string tag)
-        {
-            foreach (Control timeCheckBox in endTimeGroupBox.Controls)
-            {
-                if (timeCheckBox is RadioButton && timeCheckBox.Tag.Equals(tag))
-                {
-                    timeCheckBox.Enabled = true;
-                }
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string tag = numericUpDown1.Value.ToString();
-
-            DisableEndTimeRadioButtonByTag(tag);
-        }
     }
 }

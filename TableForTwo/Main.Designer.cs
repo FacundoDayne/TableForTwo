@@ -151,6 +151,7 @@
             this.mySchedulesTab.Size = new System.Drawing.Size(958, 711);
             this.mySchedulesTab.TabIndex = 3;
             this.mySchedulesTab.Visible = false;
+            this.mySchedulesTab.Load += new System.EventHandler(this.mySchedulesTab_Load);
             // 
             // Main
             // 

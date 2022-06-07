@@ -23,15 +23,22 @@ namespace TableForTwo
             if (Username.Text == ""|| Password.Text == "" || Confirm.Text == "" || 
                 Username.Text == " " || Password.Text == " " || Confirm.Text == " ")
             {
-                label4.Show(); label13.Hide();
+                label4.Show(); label13.Hide(); label14.Hide();
             }
             else if(Password.Text != Confirm.Text){
-                label4.Hide();  label13.Show(); 
+                label4.Hide();  label13.Show(); label14.Hide();
             }
             else
             {
-                Sequel.addUser(FirstName.Text, LastName.Text, Contact.Text, Email.Text, Username.Text, Password.Text);                
-                this.Hide();
+                if (!Sequel.checkUsername(Username.Text.Trim()))
+                {
+                    Sequel.addUser(FirstName.Text, LastName.Text, Contact.Text, Email.Text, Username.Text, Password.Text);
+                    this.Hide();
+                }
+                else
+                {
+                    label4.Hide(); label13.Hide(); label14.Show();
+                }
             }
         }
 
@@ -41,7 +48,8 @@ namespace TableForTwo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
 
@@ -49,7 +57,8 @@ namespace TableForTwo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.LastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
 
@@ -58,7 +67,8 @@ namespace TableForTwo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.Contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
 
@@ -66,7 +76,8 @@ namespace TableForTwo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.Email.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
 
@@ -74,21 +85,24 @@ namespace TableForTwo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.Username.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
         private void Password_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
         private void Confirm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.Confirm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
+                button1_Click(sender, e);
+                //this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(button1_Click);
             }
         }
 

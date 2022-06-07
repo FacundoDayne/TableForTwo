@@ -91,7 +91,7 @@
             this.button1.Location = new System.Drawing.Point(341, 641);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(283, 75);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Sign In";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -101,16 +101,15 @@
             this.textBox1.Location = new System.Drawing.Point(546, 526);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(267, 23);
-            this.textBox1.TabIndex = 5;
+            this.textBox1.TabIndex = 1;
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(546, 572);
             this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(267, 23);
-            this.textBox2.TabIndex = 6;
+            this.textBox2.TabIndex = 2;
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // button2
@@ -120,7 +119,7 @@
             this.button2.Location = new System.Drawing.Point(650, 641);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(283, 75);
-            this.button2.TabIndex = 7;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Sign Up";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
