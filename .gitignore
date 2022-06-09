@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/TableForTwo/admin_mode.cs
+/TableForTwo/admin_mode.Designer.cs
+/TableForTwo/admin_mode.resx

@@ -431,7 +431,7 @@
             this.rbs23.Size = new System.Drawing.Size(52, 17);
             this.rbs23.TabIndex = 22;
             this.rbs23.Tag = "23";
-            this.rbs23.Text = "11 AM";
+            this.rbs23.Text = "11 PM";
             this.rbs23.UseVisualStyleBackColor = true;
             this.rbs23.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -444,7 +444,7 @@
             this.rbs22.Size = new System.Drawing.Size(54, 17);
             this.rbs22.TabIndex = 21;
             this.rbs22.Tag = "22";
-            this.rbs22.Text = "10 AM";
+            this.rbs22.Text = "10 PM";
             this.rbs22.UseVisualStyleBackColor = true;
             this.rbs22.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -457,7 +457,7 @@
             this.rbs21.Size = new System.Drawing.Size(50, 17);
             this.rbs21.TabIndex = 20;
             this.rbs21.Tag = "21";
-            this.rbs21.Text = "9 AM";
+            this.rbs21.Text = "9 PM";
             this.rbs21.UseVisualStyleBackColor = true;
             this.rbs21.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -470,7 +470,7 @@
             this.rbs20.Size = new System.Drawing.Size(50, 17);
             this.rbs20.TabIndex = 19;
             this.rbs20.Tag = "20";
-            this.rbs20.Text = "8 AM";
+            this.rbs20.Text = "8 PM";
             this.rbs20.UseVisualStyleBackColor = true;
             this.rbs20.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -483,7 +483,7 @@
             this.rbs19.Size = new System.Drawing.Size(50, 17);
             this.rbs19.TabIndex = 18;
             this.rbs19.Tag = "19";
-            this.rbs19.Text = "7 AM";
+            this.rbs19.Text = "7 PM";
             this.rbs19.UseVisualStyleBackColor = true;
             this.rbs19.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -496,7 +496,7 @@
             this.rbs18.Size = new System.Drawing.Size(50, 17);
             this.rbs18.TabIndex = 17;
             this.rbs18.Tag = "18";
-            this.rbs18.Text = "6 AM";
+            this.rbs18.Text = "6 PM";
             this.rbs18.UseVisualStyleBackColor = true;
             this.rbs18.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -509,7 +509,7 @@
             this.rbs17.Size = new System.Drawing.Size(50, 17);
             this.rbs17.TabIndex = 16;
             this.rbs17.Tag = "17";
-            this.rbs17.Text = "5 AM";
+            this.rbs17.Text = "5 PM";
             this.rbs17.UseVisualStyleBackColor = true;
             this.rbs17.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -522,7 +522,7 @@
             this.rbs16.Size = new System.Drawing.Size(50, 17);
             this.rbs16.TabIndex = 15;
             this.rbs16.Tag = "16";
-            this.rbs16.Text = "4 AM";
+            this.rbs16.Text = "4 PM";
             this.rbs16.UseVisualStyleBackColor = true;
             this.rbs16.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -535,7 +535,7 @@
             this.rbs15.Size = new System.Drawing.Size(50, 17);
             this.rbs15.TabIndex = 14;
             this.rbs15.Tag = "15";
-            this.rbs15.Text = "3 AM";
+            this.rbs15.Text = "3 PM";
             this.rbs15.UseVisualStyleBackColor = true;
             this.rbs15.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -548,7 +548,7 @@
             this.rbs14.Size = new System.Drawing.Size(50, 17);
             this.rbs14.TabIndex = 13;
             this.rbs14.Tag = "14";
-            this.rbs14.Text = "2 AM";
+            this.rbs14.Text = "2 PM";
             this.rbs14.UseVisualStyleBackColor = true;
             this.rbs14.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -561,7 +561,7 @@
             this.rbs13.Size = new System.Drawing.Size(48, 17);
             this.rbs13.TabIndex = 12;
             this.rbs13.Tag = "13";
-            this.rbs13.Text = "1 AM";
+            this.rbs13.Text = "1 PM";
             this.rbs13.UseVisualStyleBackColor = true;
             this.rbs13.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -574,7 +574,7 @@
             this.rbs12.Size = new System.Drawing.Size(54, 17);
             this.rbs12.TabIndex = 11;
             this.rbs12.Tag = "12";
-            this.rbs12.Text = "12 AM";
+            this.rbs12.Text = "12 PM";
             this.rbs12.UseVisualStyleBackColor = true;
             this.rbs12.CheckedChanged += new System.EventHandler(this.StartTimeCheckChanged);
             // 
@@ -778,7 +778,7 @@
             this.rbe23.Size = new System.Drawing.Size(52, 17);
             this.rbe23.TabIndex = 22;
             this.rbe23.Tag = "23";
-            this.rbe23.Text = "11 AM";
+            this.rbe23.Text = "11 PM";
             this.rbe23.UseVisualStyleBackColor = true;
             this.rbe23.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
@@ -791,7 +791,7 @@
             this.rbe22.Size = new System.Drawing.Size(54, 17);
             this.rbe22.TabIndex = 21;
             this.rbe22.Tag = "22";
-            this.rbe22.Text = "10 AM";
+            this.rbe22.Text = "10 PM";
             this.rbe22.UseVisualStyleBackColor = true;
             this.rbe22.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
@@ -804,7 +804,7 @@
             this.rbe21.Size = new System.Drawing.Size(50, 17);
             this.rbe21.TabIndex = 20;
             this.rbe21.Tag = "21";
-            this.rbe21.Text = "9 AM";
+            this.rbe21.Text = "9 PM";
             this.rbe21.UseVisualStyleBackColor = true;
             this.rbe21.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
@@ -817,7 +817,7 @@
             this.rbe20.Size = new System.Drawing.Size(50, 17);
             this.rbe20.TabIndex = 19;
             this.rbe20.Tag = "20";
-            this.rbe20.Text = "8 AM";
+            this.rbe20.Text = "8 PM";
             this.rbe20.UseVisualStyleBackColor = true;
             this.rbe20.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
@@ -830,7 +830,7 @@
             this.rbe19.Size = new System.Drawing.Size(50, 17);
             this.rbe19.TabIndex = 18;
             this.rbe19.Tag = "19";
-            this.rbe19.Text = "7 AM";
+            this.rbe19.Text = "7 PM";
             this.rbe19.UseVisualStyleBackColor = true;
             this.rbe19.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
@@ -843,7 +843,7 @@
             this.rbe18.Size = new System.Drawing.Size(50, 17);
             this.rbe18.TabIndex = 17;
             this.rbe18.Tag = "18";
-            this.rbe18.Text = "6 AM";
+            this.rbe18.Text = "6 PM";
             this.rbe18.UseVisualStyleBackColor = true;
             this.rbe18.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
@@ -856,7 +856,7 @@
             this.rbe17.Size = new System.Drawing.Size(50, 17);
             this.rbe17.TabIndex = 16;
             this.rbe17.Tag = "17";
-            this.rbe17.Text = "5 AM";
+            this.rbe17.Text = "5 PM";
             this.rbe17.UseVisualStyleBackColor = true;
             this.rbe17.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
@@ -869,7 +869,7 @@
             this.rbe16.Size = new System.Drawing.Size(50, 17);
             this.rbe16.TabIndex = 15;
             this.rbe16.Tag = "16";
-            this.rbe16.Text = "4 AM";
+            this.rbe16.Text = "4 PM";
             this.rbe16.UseVisualStyleBackColor = true;
             this.rbe16.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
@@ -882,7 +882,7 @@
             this.rbe15.Size = new System.Drawing.Size(50, 17);
             this.rbe15.TabIndex = 14;
             this.rbe15.Tag = "15";
-            this.rbe15.Text = "3 AM";
+            this.rbe15.Text = "3 PM";
             this.rbe15.UseVisualStyleBackColor = true;
             this.rbe15.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
@@ -895,7 +895,7 @@
             this.rbe14.Size = new System.Drawing.Size(50, 17);
             this.rbe14.TabIndex = 13;
             this.rbe14.Tag = "14";
-            this.rbe14.Text = "2 AM";
+            this.rbe14.Text = "2 PM";
             this.rbe14.UseVisualStyleBackColor = true;
             this.rbe14.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
@@ -908,7 +908,7 @@
             this.rbe13.Size = new System.Drawing.Size(48, 17);
             this.rbe13.TabIndex = 12;
             this.rbe13.Tag = "13";
-            this.rbe13.Text = "1 AM";
+            this.rbe13.Text = "1 PM";
             this.rbe13.UseVisualStyleBackColor = true;
             this.rbe13.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
@@ -921,7 +921,7 @@
             this.rbe12.Size = new System.Drawing.Size(54, 17);
             this.rbe12.TabIndex = 11;
             this.rbe12.Tag = "12";
-            this.rbe12.Text = "12 AM";
+            this.rbe12.Text = "12 PM";
             this.rbe12.UseVisualStyleBackColor = true;
             this.rbe12.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
