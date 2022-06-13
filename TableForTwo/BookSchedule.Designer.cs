@@ -37,18 +37,18 @@
             this.decrementDateButton = new System.Windows.Forms.Button();
             this.incrementDateButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.table2K = new System.Windows.Forms.Panel();
-            this.table2E = new System.Windows.Forms.Panel();
-            this.table2H = new System.Windows.Forms.Panel();
-            this.table2B = new System.Windows.Forms.Panel();
-            this.table2L = new System.Windows.Forms.Panel();
-            this.table2F = new System.Windows.Forms.Panel();
-            this.table2I = new System.Windows.Forms.Panel();
-            this.table2C = new System.Windows.Forms.Panel();
-            this.table2J = new System.Windows.Forms.Panel();
-            this.table2D = new System.Windows.Forms.Panel();
-            this.table2G = new System.Windows.Forms.Panel();
             this.table2A = new System.Windows.Forms.Panel();
+            this.table2G = new System.Windows.Forms.Panel();
+            this.table2D = new System.Windows.Forms.Panel();
+            this.table2J = new System.Windows.Forms.Panel();
+            this.table2C = new System.Windows.Forms.Panel();
+            this.table2I = new System.Windows.Forms.Panel();
+            this.table2F = new System.Windows.Forms.Panel();
+            this.table2L = new System.Windows.Forms.Panel();
+            this.table2B = new System.Windows.Forms.Panel();
+            this.table2H = new System.Windows.Forms.Panel();
+            this.table2E = new System.Windows.Forms.Panel();
+            this.table2K = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.startTimeGroupBox = new System.Windows.Forms.GroupBox();
             this.rbs24 = new System.Windows.Forms.RadioButton();
@@ -100,21 +100,46 @@
             this.rbe3 = new System.Windows.Forms.RadioButton();
             this.rbe2 = new System.Windows.Forms.RadioButton();
             this.rbe1 = new System.Windows.Forms.RadioButton();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.AddReservationButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableContainer = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.AddReservationButton = new System.Windows.Forms.Button();
-            this.ClearButton = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.MembersCapacity)).BeginInit();
             this.startTimeGroupBox.SuspendLayout();
             this.endTimeGroupBox.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.panel22.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableContainer.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -206,135 +231,18 @@
             this.incrementDateButton.UseVisualStyleBackColor = true;
             this.incrementDateButton.Click += new System.EventHandler(this.incrementDateButton_Click);
             // 
-            // table2K
+            // table2A
             // 
-            this.table2K.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
-            this.table2K.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.table2K.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.table2K.Location = new System.Drawing.Point(525, 405);
-            this.table2K.Name = "table2K";
-            this.table2K.Size = new System.Drawing.Size(54, 96);
-            this.table2K.TabIndex = 10;
-            this.table2K.Tag = "2 14";
-            this.toolTip1.SetToolTip(this.table2K, "Table for 2");
-            this.table2K.Click += new System.EventHandler(this.TableClick);
-            // 
-            // table2E
-            // 
-            this.table2E.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
-            this.table2E.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.table2E.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.table2E.Location = new System.Drawing.Point(525, 105);
-            this.table2E.Name = "table2E";
-            this.table2E.Size = new System.Drawing.Size(54, 96);
-            this.table2E.TabIndex = 4;
-            this.table2E.Tag = "2 5";
-            this.toolTip1.SetToolTip(this.table2E, "Table for 2");
-            this.table2E.Click += new System.EventHandler(this.TableClick);
-            // 
-            // table2H
-            // 
-            this.table2H.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
-            this.table2H.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.table2H.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.table2H.Location = new System.Drawing.Point(175, 405);
-            this.table2H.Name = "table2H";
-            this.table2H.Size = new System.Drawing.Size(54, 96);
-            this.table2H.TabIndex = 7;
-            this.table2H.Tag = "2 11";
-            this.toolTip1.SetToolTip(this.table2H, "Table for 2");
-            this.table2H.Click += new System.EventHandler(this.TableClick);
-            // 
-            // table2B
-            // 
-            this.table2B.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
-            this.table2B.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.table2B.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.table2B.Location = new System.Drawing.Point(175, 105);
-            this.table2B.Name = "table2B";
-            this.table2B.Size = new System.Drawing.Size(54, 96);
-            this.table2B.TabIndex = 1;
-            this.table2B.Tag = "2 2";
-            this.toolTip1.SetToolTip(this.table2B, "Table for 2");
-            this.table2B.Click += new System.EventHandler(this.TableClick);
-            // 
-            // table2L
-            // 
-            this.table2L.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
-            this.table2L.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.table2L.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.table2L.Location = new System.Drawing.Point(625, 405);
-            this.table2L.Name = "table2L";
-            this.table2L.Size = new System.Drawing.Size(54, 96);
-            this.table2L.TabIndex = 11;
-            this.table2L.Tag = "2 15";
-            this.toolTip1.SetToolTip(this.table2L, "Table for 2");
-            this.table2L.Click += new System.EventHandler(this.TableClick);
-            // 
-            // table2F
-            // 
-            this.table2F.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
-            this.table2F.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.table2F.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.table2F.Location = new System.Drawing.Point(625, 105);
-            this.table2F.Name = "table2F";
-            this.table2F.Size = new System.Drawing.Size(54, 96);
-            this.table2F.TabIndex = 5;
-            this.table2F.Tag = "2 6";
-            this.toolTip1.SetToolTip(this.table2F, "Table for 2");
-            this.table2F.Click += new System.EventHandler(this.TableClick);
-            // 
-            // table2I
-            // 
-            this.table2I.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
-            this.table2I.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.table2I.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.table2I.Location = new System.Drawing.Point(275, 405);
-            this.table2I.Name = "table2I";
-            this.table2I.Size = new System.Drawing.Size(54, 96);
-            this.table2I.TabIndex = 8;
-            this.table2I.Tag = "2 12";
-            this.toolTip1.SetToolTip(this.table2I, "Table for 2");
-            this.table2I.Click += new System.EventHandler(this.TableClick);
-            // 
-            // table2C
-            // 
-            this.table2C.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
-            this.table2C.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.table2C.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.table2C.Location = new System.Drawing.Point(275, 105);
-            this.table2C.Name = "table2C";
-            this.table2C.Size = new System.Drawing.Size(54, 96);
-            this.table2C.TabIndex = 2;
-            this.table2C.Tag = "2 3";
-            this.toolTip1.SetToolTip(this.table2C, "Table for 2");
-            this.table2C.Click += new System.EventHandler(this.TableClick);
-            // 
-            // table2J
-            // 
-            this.table2J.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
-            this.table2J.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.table2J.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.table2J.Location = new System.Drawing.Point(425, 405);
-            this.table2J.Name = "table2J";
-            this.table2J.Size = new System.Drawing.Size(54, 96);
-            this.table2J.TabIndex = 9;
-            this.table2J.Tag = "2 13";
-            this.toolTip1.SetToolTip(this.table2J, "Table for 2");
-            this.table2J.Click += new System.EventHandler(this.TableClick);
-            // 
-            // table2D
-            // 
-            this.table2D.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
-            this.table2D.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.table2D.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.table2D.Location = new System.Drawing.Point(425, 105);
-            this.table2D.Name = "table2D";
-            this.table2D.Size = new System.Drawing.Size(54, 96);
-            this.table2D.TabIndex = 3;
-            this.table2D.Tag = "2 4";
-            this.toolTip1.SetToolTip(this.table2D, "Table for 2");
-            this.table2D.Click += new System.EventHandler(this.TableClick);
+            this.table2A.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
+            this.table2A.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.table2A.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table2A.Location = new System.Drawing.Point(75, 105);
+            this.table2A.Name = "table2A";
+            this.table2A.Size = new System.Drawing.Size(54, 96);
+            this.table2A.TabIndex = 0;
+            this.table2A.Tag = "2 1";
+            this.toolTip1.SetToolTip(this.table2A, "Table for 2");
+            this.table2A.Click += new System.EventHandler(this.TableClick);
             // 
             // table2G
             // 
@@ -349,18 +257,135 @@
             this.toolTip1.SetToolTip(this.table2G, "Table for 2");
             this.table2G.Click += new System.EventHandler(this.TableClick);
             // 
-            // table2A
+            // table2D
             // 
-            this.table2A.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
-            this.table2A.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.table2A.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.table2A.Location = new System.Drawing.Point(75, 105);
-            this.table2A.Name = "table2A";
-            this.table2A.Size = new System.Drawing.Size(54, 96);
-            this.table2A.TabIndex = 0;
-            this.table2A.Tag = "2 1";
-            this.toolTip1.SetToolTip(this.table2A, "Table for 2");
-            this.table2A.Click += new System.EventHandler(this.TableClick);
+            this.table2D.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
+            this.table2D.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.table2D.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table2D.Location = new System.Drawing.Point(425, 105);
+            this.table2D.Name = "table2D";
+            this.table2D.Size = new System.Drawing.Size(54, 96);
+            this.table2D.TabIndex = 3;
+            this.table2D.Tag = "2 4";
+            this.toolTip1.SetToolTip(this.table2D, "Table for 2");
+            this.table2D.Click += new System.EventHandler(this.TableClick);
+            // 
+            // table2J
+            // 
+            this.table2J.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
+            this.table2J.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.table2J.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table2J.Location = new System.Drawing.Point(425, 405);
+            this.table2J.Name = "table2J";
+            this.table2J.Size = new System.Drawing.Size(54, 96);
+            this.table2J.TabIndex = 9;
+            this.table2J.Tag = "2 13";
+            this.toolTip1.SetToolTip(this.table2J, "Table for 2");
+            this.table2J.Click += new System.EventHandler(this.TableClick);
+            // 
+            // table2C
+            // 
+            this.table2C.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
+            this.table2C.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.table2C.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table2C.Location = new System.Drawing.Point(275, 105);
+            this.table2C.Name = "table2C";
+            this.table2C.Size = new System.Drawing.Size(54, 96);
+            this.table2C.TabIndex = 2;
+            this.table2C.Tag = "2 3";
+            this.toolTip1.SetToolTip(this.table2C, "Table for 2");
+            this.table2C.Click += new System.EventHandler(this.TableClick);
+            // 
+            // table2I
+            // 
+            this.table2I.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
+            this.table2I.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.table2I.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table2I.Location = new System.Drawing.Point(275, 405);
+            this.table2I.Name = "table2I";
+            this.table2I.Size = new System.Drawing.Size(54, 96);
+            this.table2I.TabIndex = 8;
+            this.table2I.Tag = "2 12";
+            this.toolTip1.SetToolTip(this.table2I, "Table for 2");
+            this.table2I.Click += new System.EventHandler(this.TableClick);
+            // 
+            // table2F
+            // 
+            this.table2F.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
+            this.table2F.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.table2F.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table2F.Location = new System.Drawing.Point(625, 105);
+            this.table2F.Name = "table2F";
+            this.table2F.Size = new System.Drawing.Size(54, 96);
+            this.table2F.TabIndex = 5;
+            this.table2F.Tag = "2 6";
+            this.toolTip1.SetToolTip(this.table2F, "Table for 2");
+            this.table2F.Click += new System.EventHandler(this.TableClick);
+            // 
+            // table2L
+            // 
+            this.table2L.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
+            this.table2L.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.table2L.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table2L.Location = new System.Drawing.Point(625, 405);
+            this.table2L.Name = "table2L";
+            this.table2L.Size = new System.Drawing.Size(54, 96);
+            this.table2L.TabIndex = 11;
+            this.table2L.Tag = "2 15";
+            this.toolTip1.SetToolTip(this.table2L, "Table for 2");
+            this.table2L.Click += new System.EventHandler(this.TableClick);
+            // 
+            // table2B
+            // 
+            this.table2B.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
+            this.table2B.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.table2B.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table2B.Location = new System.Drawing.Point(175, 105);
+            this.table2B.Name = "table2B";
+            this.table2B.Size = new System.Drawing.Size(54, 96);
+            this.table2B.TabIndex = 1;
+            this.table2B.Tag = "2 2";
+            this.toolTip1.SetToolTip(this.table2B, "Table for 2");
+            this.table2B.Click += new System.EventHandler(this.TableClick);
+            // 
+            // table2H
+            // 
+            this.table2H.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
+            this.table2H.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.table2H.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table2H.Location = new System.Drawing.Point(175, 405);
+            this.table2H.Name = "table2H";
+            this.table2H.Size = new System.Drawing.Size(54, 96);
+            this.table2H.TabIndex = 7;
+            this.table2H.Tag = "2 11";
+            this.toolTip1.SetToolTip(this.table2H, "Table for 2");
+            this.table2H.Click += new System.EventHandler(this.TableClick);
+            // 
+            // table2E
+            // 
+            this.table2E.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
+            this.table2E.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.table2E.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table2E.Location = new System.Drawing.Point(525, 105);
+            this.table2E.Name = "table2E";
+            this.table2E.Size = new System.Drawing.Size(54, 96);
+            this.table2E.TabIndex = 4;
+            this.table2E.Tag = "2 5";
+            this.toolTip1.SetToolTip(this.table2E, "Table for 2");
+            this.table2E.Click += new System.EventHandler(this.TableClick);
+            // 
+            // table2K
+            // 
+            this.table2K.BackgroundImage = global::TableForTwo.Properties.Resources.TableAvailable;
+            this.table2K.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.table2K.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table2K.Location = new System.Drawing.Point(525, 405);
+            this.table2K.Name = "table2K";
+            this.table2K.Size = new System.Drawing.Size(54, 96);
+            this.table2K.TabIndex = 10;
+            this.table2K.Tag = "2 14";
+            this.toolTip1.SetToolTip(this.table2K, "Table for 2");
+            this.table2K.Click += new System.EventHandler(this.TableClick);
             // 
             // label4
             // 
@@ -1069,16 +1094,176 @@
             this.rbe1.UseVisualStyleBackColor = true;
             this.rbe1.CheckedChanged += new System.EventHandler(this.EndTimeCheckChanged);
             // 
-            // tabControl1
+            // AddReservationButton
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(181, 115);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(774, 593);
-            this.tabControl1.TabIndex = 0;
+            this.AddReservationButton.BackColor = System.Drawing.Color.YellowGreen;
+            this.AddReservationButton.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.AddReservationButton.FlatAppearance.BorderSize = 0;
+            this.AddReservationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.YellowGreen;
+            this.AddReservationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.YellowGreen;
+            this.AddReservationButton.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddReservationButton.ForeColor = System.Drawing.Color.White;
+            this.AddReservationButton.Location = new System.Drawing.Point(813, 84);
+            this.AddReservationButton.Name = "AddReservationButton";
+            this.AddReservationButton.Size = new System.Drawing.Size(142, 48);
+            this.AddReservationButton.TabIndex = 25;
+            this.AddReservationButton.Text = "Add Reservation";
+            this.AddReservationButton.UseVisualStyleBackColor = false;
+            this.AddReservationButton.Click += new System.EventHandler(this.AddReservatoinButton_Click);
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.BackColor = System.Drawing.Color.LightCoral;
+            this.ClearButton.FlatAppearance.BorderColor = System.Drawing.Color.LightCoral;
+            this.ClearButton.FlatAppearance.BorderSize = 0;
+            this.ClearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
+            this.ClearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.ClearButton.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.Location = new System.Drawing.Point(665, 84);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(142, 48);
+            this.ClearButton.TabIndex = 26;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = false;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.panel22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 23);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(766, 566);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Floor2";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.White;
+            this.panel22.BackgroundImage = global::TableForTwo.Properties.Resources.Floor2;
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Controls.Add(this.panel24);
+            this.panel22.Controls.Add(this.panel25);
+            this.panel22.Controls.Add(this.panel26);
+            this.panel22.Controls.Add(this.panel27);
+            this.panel22.Controls.Add(this.panel28);
+            this.panel22.Controls.Add(this.panel29);
+            this.panel22.Controls.Add(this.panel30);
+            this.panel22.Controls.Add(this.panel31);
+            this.panel22.Location = new System.Drawing.Point(6, 6);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(754, 554);
+            this.panel22.TabIndex = 0;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.Transparent;
+            this.panel23.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor6Available;
+            this.panel23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel23.Location = new System.Drawing.Point(513, 393);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(208, 127);
+            this.panel23.TabIndex = 30;
+            this.panel23.Tag = "6 24";
+            this.panel23.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.Transparent;
+            this.panel24.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor6Available;
+            this.panel24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel24.Location = new System.Drawing.Point(512, 217);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(208, 127);
+            this.panel24.TabIndex = 27;
+            this.panel24.Tag = "6 21";
+            this.panel24.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.Transparent;
+            this.panel25.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor6Available;
+            this.panel25.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel25.Location = new System.Drawing.Point(274, 393);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(208, 127);
+            this.panel25.TabIndex = 29;
+            this.panel25.Tag = "6 23";
+            this.panel25.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.Transparent;
+            this.panel26.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor6Available;
+            this.panel26.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel26.Location = new System.Drawing.Point(513, 34);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(208, 127);
+            this.panel26.TabIndex = 24;
+            this.panel26.Tag = "6 18";
+            this.panel26.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.Transparent;
+            this.panel27.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor6Available;
+            this.panel27.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel27.Location = new System.Drawing.Point(34, 393);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(208, 127);
+            this.panel27.TabIndex = 28;
+            this.panel27.Tag = "6 22";
+            this.panel27.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.Transparent;
+            this.panel28.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor6Available;
+            this.panel28.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel28.Location = new System.Drawing.Point(273, 217);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(208, 127);
+            this.panel28.TabIndex = 26;
+            this.panel28.Tag = "6 20";
+            this.panel28.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.Transparent;
+            this.panel29.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor6Available;
+            this.panel29.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel29.Location = new System.Drawing.Point(33, 217);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(208, 127);
+            this.panel29.TabIndex = 25;
+            this.panel29.Tag = "6 19";
+            this.panel29.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.Transparent;
+            this.panel30.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor6Available;
+            this.panel30.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel30.Location = new System.Drawing.Point(274, 34);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(208, 127);
+            this.panel30.TabIndex = 23;
+            this.panel30.Tag = "6 17";
+            this.panel30.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.Transparent;
+            this.panel31.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor6Available;
+            this.panel31.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel31.Location = new System.Drawing.Point(34, 34);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(208, 127);
+            this.panel31.TabIndex = 22;
+            this.panel31.Tag = "6 16";
+            this.panel31.Click += new System.EventHandler(this.TableClick);
             // 
             // tabPage1
             // 
@@ -1114,6 +1299,7 @@
             this.tableContainer.Name = "tableContainer";
             this.tableContainer.Size = new System.Drawing.Size(757, 553);
             this.tableContainer.TabIndex = 0;
+            this.tableContainer.Tag = "1";
             // 
             // panel3
             // 
@@ -1148,49 +1334,155 @@
             this.panel1.Tag = "4 7";
             this.panel1.Click += new System.EventHandler(this.TableClick);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabControl1.Location = new System.Drawing.Point(181, 115);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(774, 593);
+            this.tabControl1.TabIndex = 0;
+            this.tabControl1.Tag = "3";
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.panel4);
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(766, 566);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Floor 2";
+            this.tabPage2.TabIndex = 4;
+            this.tabPage2.Text = "Floor 3";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // AddReservationButton
+            // panel4
             // 
-            this.AddReservationButton.BackColor = System.Drawing.Color.YellowGreen;
-            this.AddReservationButton.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.AddReservationButton.FlatAppearance.BorderSize = 0;
-            this.AddReservationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.YellowGreen;
-            this.AddReservationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.YellowGreen;
-            this.AddReservationButton.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddReservationButton.ForeColor = System.Drawing.Color.White;
-            this.AddReservationButton.Location = new System.Drawing.Point(813, 84);
-            this.AddReservationButton.Name = "AddReservationButton";
-            this.AddReservationButton.Size = new System.Drawing.Size(142, 48);
-            this.AddReservationButton.TabIndex = 25;
-            this.AddReservationButton.Text = "Add Reservation";
-            this.AddReservationButton.UseVisualStyleBackColor = false;
-            this.AddReservationButton.Click += new System.EventHandler(this.AddReservatoinButton_Click);
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackgroundImage = global::TableForTwo.Properties.Resources.Floor2;
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.panel8);
+            this.panel4.Controls.Add(this.panel9);
+            this.panel4.Controls.Add(this.panel10);
+            this.panel4.Controls.Add(this.panel11);
+            this.panel4.Controls.Add(this.panel12);
+            this.panel4.Controls.Add(this.panel32);
+            this.panel4.Location = new System.Drawing.Point(6, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(754, 554);
+            this.panel4.TabIndex = 0;
             // 
-            // ClearButton
+            // panel5
             // 
-            this.ClearButton.BackColor = System.Drawing.Color.LightCoral;
-            this.ClearButton.FlatAppearance.BorderColor = System.Drawing.Color.LightCoral;
-            this.ClearButton.FlatAppearance.BorderSize = 0;
-            this.ClearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
-            this.ClearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-            this.ClearButton.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ClearButton.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.Location = new System.Drawing.Point(665, 84);
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(142, 48);
-            this.ClearButton.TabIndex = 26;
-            this.ClearButton.Text = "Clear";
-            this.ClearButton.UseVisualStyleBackColor = false;
-            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor10Available;
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel5.Location = new System.Drawing.Point(513, 393);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(208, 127);
+            this.panel5.TabIndex = 39;
+            this.panel5.Tag = "10 33";
+            this.panel5.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor10Available;
+            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel6.Location = new System.Drawing.Point(512, 217);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(208, 127);
+            this.panel6.TabIndex = 36;
+            this.panel6.Tag = "10 30";
+            this.panel6.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor10Available;
+            this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel7.Location = new System.Drawing.Point(274, 393);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(208, 127);
+            this.panel7.TabIndex = 38;
+            this.panel7.Tag = "10 32";
+            this.panel7.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
+            this.panel8.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor10Available;
+            this.panel8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel8.Location = new System.Drawing.Point(513, 34);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(208, 127);
+            this.panel8.TabIndex = 33;
+            this.panel8.Tag = "10 27";
+            this.panel8.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor10Available;
+            this.panel9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel9.Location = new System.Drawing.Point(34, 393);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(208, 127);
+            this.panel9.TabIndex = 37;
+            this.panel9.Tag = "10 31";
+            this.panel9.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor10Available;
+            this.panel10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel10.Location = new System.Drawing.Point(273, 217);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(208, 127);
+            this.panel10.TabIndex = 35;
+            this.panel10.Tag = "10 29";
+            this.panel10.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor10Available;
+            this.panel11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel11.Location = new System.Drawing.Point(33, 217);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(208, 127);
+            this.panel11.TabIndex = 34;
+            this.panel11.Tag = "10 28";
+            this.panel11.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Transparent;
+            this.panel12.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor10Available;
+            this.panel12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel12.Location = new System.Drawing.Point(274, 34);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(208, 127);
+            this.panel12.TabIndex = 32;
+            this.panel12.Tag = "10 26";
+            this.panel12.Click += new System.EventHandler(this.TableClick);
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.Transparent;
+            this.panel32.BackgroundImage = global::TableForTwo.Properties.Resources.TableFor10Available;
+            this.panel32.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel32.Location = new System.Drawing.Point(34, 34);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(208, 127);
+            this.panel32.TabIndex = 31;
+            this.panel32.Tag = "10 25";
+            this.panel32.Click += new System.EventHandler(this.TableClick);
             // 
             // BookSchedule
             // 
@@ -1218,9 +1510,13 @@
             this.startTimeGroupBox.PerformLayout();
             this.endTimeGroupBox.ResumeLayout(false);
             this.endTimeGroupBox.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableContainer.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1287,10 +1583,24 @@
         private RadioButton rbe3;
         private RadioButton rbe2;
         private RadioButton rbe1;
-        private TabControl tabControl1;
+        private Button AddReservationButton;
+        private Button ClearButton;
+        private TabPage tabPage4;
+        private Panel panel22;
+        private Panel panel23;
+        private Panel panel24;
+        private Panel panel25;
+        private Panel panel26;
+        private Panel panel27;
+        private Panel panel28;
+        private Panel panel29;
+        private Panel panel30;
+        private Panel panel31;
         private TabPage tabPage1;
-        private TabPage tabPage2;
         private Panel tableContainer;
+        private Panel panel3;
+        private Panel panel2;
+        private Panel panel1;
         private Panel table2K;
         private Panel table2E;
         private Panel table2H;
@@ -1303,10 +1613,17 @@
         private Panel table2D;
         private Panel table2G;
         private Panel table2A;
-        private Panel panel3;
-        private Panel panel2;
-        private Panel panel1;
-        private Button AddReservationButton;
-        private Button ClearButton;
+        private TabControl tabControl1;
+        private TabPage tabPage2;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
+        private Panel panel7;
+        private Panel panel8;
+        private Panel panel9;
+        private Panel panel10;
+        private Panel panel11;
+        private Panel panel12;
+        private Panel panel32;
     }
 }

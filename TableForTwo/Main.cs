@@ -70,5 +70,13 @@
         {
 
         }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            UserInformation.ClearLoggedInUser();
+            new Landing().Show();
+
+            this.Hide();
+        }
     }
 }

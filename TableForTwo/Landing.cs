@@ -2,7 +2,6 @@ namespace TableForTwo
 {
     public partial class Landing : Form
     {
-
         
         public Landing()
         {
@@ -30,6 +29,7 @@ namespace TableForTwo
                     {
                         UserInformation CurrentUser = new UserInformation(user, pass);
                         UserInformation.SetLoggedInUser(CurrentUser);
+
                         this.Hide();
                         Main m = new Main();
                         m.Show();
@@ -51,7 +51,7 @@ namespace TableForTwo
 
         private void Landing_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)

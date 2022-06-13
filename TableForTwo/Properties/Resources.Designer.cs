@@ -83,6 +83,16 @@ namespace TableForTwo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Floor2 {
+            get {
+                object obj = ResourceManager.GetObject("Floor2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iris {
             get {
                 object obj = ResourceManager.GetObject("iris", resourceCulture);
@@ -153,6 +163,36 @@ namespace TableForTwo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap TableFor10Available {
+            get {
+                object obj = ResourceManager.GetObject("TableFor10Available", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TableFor10Selected {
+            get {
+                object obj = ResourceManager.GetObject("TableFor10Selected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TableFor10Unavailable {
+            get {
+                object obj = ResourceManager.GetObject("TableFor10Unavailable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TableFor4Available {
             get {
                 object obj = ResourceManager.GetObject("TableFor4Available", resourceCulture);
@@ -176,6 +216,36 @@ namespace TableForTwo.Properties {
         internal static System.Drawing.Bitmap TableFor4Unavailable {
             get {
                 object obj = ResourceManager.GetObject("TableFor4Unavailable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TableFor6Available {
+            get {
+                object obj = ResourceManager.GetObject("TableFor6Available", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TableFor6Selected {
+            get {
+                object obj = ResourceManager.GetObject("TableFor6Selected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TableFor6Unavailable {
+            get {
+                object obj = ResourceManager.GetObject("TableFor6Unavailable", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

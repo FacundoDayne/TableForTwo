@@ -21,4 +21,9 @@
         LoggedInUser = user;
     }
 
+    public static void ClearLoggedInUser()
+    {
+        LoggedInUser = null;
+    }
+
 }

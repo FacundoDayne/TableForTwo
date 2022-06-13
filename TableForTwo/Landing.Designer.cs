@@ -108,6 +108,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(546, 572);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '•';
             this.textBox2.Size = new System.Drawing.Size(267, 23);
             this.textBox2.TabIndex = 2;
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
@@ -141,7 +142,7 @@
             // signup1
             // 
             this.signup1.BackColor = System.Drawing.Color.White;
-            this.signup1.Location = new System.Drawing.Point(-2, -4);
+            this.signup1.Location = new System.Drawing.Point(-5, -7);
             this.signup1.Name = "signup1";
             this.signup1.Size = new System.Drawing.Size(1290, 751);
             this.signup1.TabIndex = 9;

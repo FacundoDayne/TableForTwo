@@ -169,6 +169,12 @@ namespace TableForTwo
                 case 4:
                     table.BackgroundImage = Properties.Resources.TableFor4Available;
                     break;
+                case 6:
+                    table.BackgroundImage = Properties.Resources.TableFor6Available;
+                    break;
+                case 10:
+                    table.BackgroundImage = Properties.Resources.TableFor10Available;
+                    break;
             }
         }
 
@@ -183,6 +189,12 @@ namespace TableForTwo
                 case 4:
                     table.BackgroundImage = Properties.Resources.TableFor4Unavailable;
                     break;
+                case 6:
+                    table.BackgroundImage = Properties.Resources.TableFor6Unavailable;
+                    break;
+                case 10:
+                    table.BackgroundImage = Properties.Resources.TableFor10Unavailable;
+                    break;
             }
         }
 
@@ -196,6 +208,12 @@ namespace TableForTwo
                     break;
                 case 4:
                     table.BackgroundImage = Properties.Resources.TableFor4Selected;
+                    break;
+                case 6:
+                    table.BackgroundImage = Properties.Resources.TableFor6Selected;
+                    break;
+                case 10:
+                    table.BackgroundImage = Properties.Resources.TableFor10Selected;
                     break;
             }
         }
@@ -251,6 +269,7 @@ namespace TableForTwo
                     if (panel is not Panel)
                         continue;
 
+                    System.Diagnostics.Debug.WriteLine(panel.Tag);
                     foreach (Control table in panel.Controls)
                     {
                         if (table is not Panel)

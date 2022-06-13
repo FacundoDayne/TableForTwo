@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LogoutButton = new System.Windows.Forms.Button();
             this.mySchedulesButton = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.logo1 = new TableForTwo.Logo();
@@ -43,6 +44,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.Controls.Add(this.LogoutButton);
             this.panel1.Controls.Add(this.mySchedulesButton);
             this.panel1.Controls.Add(this.logoPanel);
             this.panel1.Controls.Add(this.logo1);
@@ -52,6 +54,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(299, 715);
             this.panel1.TabIndex = 0;
+            // 
+            // LogoutButton
+            // 
+            this.LogoutButton.BackColor = System.Drawing.Color.Silver;
+            this.LogoutButton.Location = new System.Drawing.Point(12, 663);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Size = new System.Drawing.Size(87, 37);
+            this.LogoutButton.TabIndex = 8;
+            this.LogoutButton.Text = "Log Out";
+            this.LogoutButton.UseVisualStyleBackColor = false;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // mySchedulesButton
             // 
@@ -83,7 +96,7 @@
             // 
             // logo1
             // 
-            this.logo1.Location = new System.Drawing.Point(55, 449);
+            this.logo1.Location = new System.Drawing.Point(50, 347);
             this.logo1.Name = "logo1";
             this.logo1.Size = new System.Drawing.Size(200, 200);
             this.logo1.TabIndex = 4;
@@ -185,5 +198,6 @@
         private Panel logoPanel;
         private Button mySchedulesButton;
         private MySchedule mySchedulesTab;
+        private Button LogoutButton;
     }
 }
